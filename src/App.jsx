@@ -7,26 +7,12 @@ import star from './assets/star.png'
 import calendar from './assets/calendar.png'
 import whatsapp from './assets/whatsapp.png'
 import instagram from './assets/instagram.png'
-import { useEffect, useRef } from "react"
+import { useRef } from "react"
+import { useHorizontalScroll } from './hooks/useHorizontalScroll'
 
 function App() {
   const stageRef = useRef(null)
-
-  useEffect(() => {
-    const el = stageRef.current
-
-    const onWheel = (e) => {
-      e.preventDefault()
-      el.scrollBy({
-        left: e.deltaY,
-        behavior: "auto",
-      })
-    }
-
-    el.addEventListener("wheel", onWheel, { passive: false })
-
-    return () => el.removeEventListener("wheel", onWheel)
-  }, [])
+  useHorizontalScroll(stageRef)
 
   return (
     <div className='relative min-h-screen overflow-hidden'>
@@ -39,18 +25,18 @@ function App() {
           <img src={star} alt="star" className="w-9 h-9" />
         </div>
 
-        <div className="flex items-center justify-evenly bg-primary w-52 h-10 rounded-b-lg">
+        <div className="flex items-center justify-evenlybg-primary w-52 h-10 rounded-b-lg">
           <img src={calendar} alt="calendar" className="w-8 h-8" />
           <img src={whatsapp} alt="whatsapp" className="w-8 h-8" />
           <img src={instagram} alt="instagram" className="w-8 h-8" />
         </div>
-
       </div>
 
       <div
         className="fixed inset-0 bg-cover bg-center -z-10"
         style={{ backgroundImage: `url(${background})`}}
-      />    
+      />
+
       <main
         ref={stageRef}
         id="stage"
