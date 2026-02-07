@@ -12,7 +12,7 @@ function Pagination({ containerRef, active, sections }) {
   }
 
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
+    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 z-40">
       {active !== 0 && (
         <span className="font-audiowide uppercase text-primary text-4xl">
           {sections[active]?.title}
