@@ -21,12 +21,12 @@ const Intro = () => {
         <div className="w-[423px] h-[564px] rounded-full overflow-hidden mx-auto my-10 shadow-2xl shadow-red-100">
           <img className='w-full h-full' src={profilepic} alt="will" />
         </div>
-        <div className="flex items-center justify-center absolute bottom-1/8 left-1/2 -translate-x-1/2 z-40 bg-secondary w-xl h-20 rounded-3xl">
+        <div className="flex items-center justify-center absolute bottom-1/7 left-1/2 -translate-x-1/2 z-40 bg-secondary w-xl h-20 rounded-3xl">
           <span className="text-[2.5rem] font-audiowide text-primary tracking-widest">
             @WILL_TATUADOR__
           </span>
         </div>
-        <div className="flex items-center justify-center absolute bottom-1 left-1/2 -translate-x-1/2 z-30 bg-primary w-lg h-20 rounded-3xl">
+        <div className="flex items-center justify-center absolute bottom-6 left-1/2 -translate-x-1/2 z-30 bg-primary w-lg h-20 rounded-3xl">
           <span className="text-[2.5rem] font-audiowide text-secondary tracking-widest">
             CONHEÇA MAIS
           </span>
