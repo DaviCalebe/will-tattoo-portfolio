@@ -1,44 +1,46 @@
-import React from 'react'
 import Masonry from 'react-masonry-css'
-import tattoo1 from "../assets/image 2.png"
-import tattoo2 from "../assets/image 3.png"
-import tattoo3 from "../assets/image 4.png"
-import tattoo4 from "../assets/image 5.png"
-import tattoo7 from "../assets/image 8.png"
-import tattoo10 from "../assets/image 19.png"
+import tattoo1 from "../assets/tattoos/t-arm-angel.jpeg"
+import tattoo2 from "../assets/tattoos/t-arm-eagle.PNG"
+import tattoo3 from "../assets/tattoos/t-arm-jesus.jpeg"
+import tattoo4 from "../assets/tattoos/t-arm-lion.jpeg"
+import tattoo5 from "../assets/tattoos/t-arm-samurai.PNG"
+import tattoo6 from "../assets/tattoos/t-arm-woman.jpeg"
+import tattoo7 from "../assets/tattoos/t-back-ounce.jpeg"
+import tattoo8 from "../assets/tattoos/t-leg-medusa.PNG"
+import tattoo9 from "../assets/tattoos/t-leg-scorpion.PNG"
+import tattoo10 from "../assets/tattoos/t-arm-tiger.PNG"
+import tattoo11 from "../assets/tattoos/t-arm-eagle-2.PNG"
+import tattoo12 from "../assets/tattoos/t-back-lion.webp"
+import tattoo13 from "../assets/tattoos/t-chest-angels.webp"
+import tattoo14 from "../assets/tattoos/t-leg-elephant.webp"
+import tattoo15 from "../assets/tattoos/t-leg-tfcisthis.webp"
+import tattoo16 from "../assets/tattoos/t-rib-tiger.webp"
 
 const Gallery = () => {
   return (
-    <section className='flex items-center justify-center flex-shrink-0 w-screen h-screen snap-center snap-always overflow-hidden'>
-      <div className="grid bg-stone-950 w-11/12 h-9/12 overflow-hidden overflow-y-auto scrollbar scrollbar-w-10 scrollbar-thumb-secondary scrollbar-thumb-rounded-full scrollbar-track-primary rounded-lg p-2">
+    <section className='flex items-center justify-center flex-shrink-0 w-screen h-screen snap-center snap-always overflow-hidden pb-10'>
+      <div className="grid w-11/12 h-10/12 overflow-hidden overflow-y-auto scrollbar scrollbar-thumb-primary scrollbar-thumb-rounded-full scrollbar-track-transparent rounded-lg p-2">
         <Masonry breakpointCols={5}
         className='my-masonry-grid'
         columnClassName='my-masonry-grid_column'
         >
-          <img src={tattoo1} alt="Tattoo 1" />
-          <img src={tattoo2} alt="Tattoo 2" />
-          <img src={tattoo3} alt="Tattoo 3" />
-          <img src={tattoo4} alt="Tattoo 4" />
-          <img src={tattoo7} alt="Tattoo 7" />
-          <img src={tattoo10} alt="Tattoo 10" />
-                    <img src={tattoo1} alt="Tattoo 1" />
-          <img src={tattoo2} alt="Tattoo 2" />
-          <img src={tattoo3} alt="Tattoo 3" />
-          <img src={tattoo4} alt="Tattoo 4" />
-          <img src={tattoo7} alt="Tattoo 7" />
-          <img src={tattoo10} alt="Tattoo 10" />
-                    <img src={tattoo1} alt="Tattoo 1" />
-          <img src={tattoo2} alt="Tattoo 2" />
-          <img src={tattoo3} alt="Tattoo 3" />
-          <img src={tattoo4} alt="Tattoo 4" />
-          <img src={tattoo7} alt="Tattoo 7" />
-          <img src={tattoo10} alt="Tattoo 10" />
-                    <img src={tattoo1} alt="Tattoo 1" />
-          <img src={tattoo2} alt="Tattoo 2" />
-          <img src={tattoo3} alt="Tattoo 3" />
-          <img src={tattoo4} alt="Tattoo 4" />
-          <img src={tattoo7} alt="Tattoo 7" />
-          <img src={tattoo10} alt="Tattoo 10" />
+          <img className="rounded-lg" src={tattoo1} alt="Tattoo 1" />
+          <img className="rounded-lg" src={tattoo2} alt="Tattoo 2" />
+          <img className="rounded-lg" src={tattoo3} alt="Tattoo 3" />
+          <img className="rounded-lg" src={tattoo4} alt="Tattoo 4" />
+          <img className="rounded-lg" src={tattoo5} alt="Tattoo 5" />
+          <img className="rounded-lg" src={tattoo6} alt="Tattoo 6" />
+          <img className="rounded-lg" src={tattoo7} alt="Tattoo 7" />
+          <img className="rounded-lg" src={tattoo8} alt="Tattoo 8" />
+          <img className="rounded-lg" src={tattoo9} alt="Tattoo 9" />
+          <img className="rounded-lg" src={tattoo10} alt="Tattoo 10" />
+          <img className="rounded-lg" src={tattoo11} alt="Tattoo 11" />
+          <img className="rounded-lg" src={tattoo12} alt="Tattoo 12" />
+          <img className="rounded-lg" src={tattoo13} alt="Tattoo 13" />
+          <img className="rounded-lg" src={tattoo14} alt="Tattoo 14" />
+          <img className="rounded-lg" src={tattoo15} alt="Tattoo 15" />
+          <img className="rounded-lg" src={tattoo16} alt="Tattoo 16" />
+
         </Masonry>
       </div>
     </section>
