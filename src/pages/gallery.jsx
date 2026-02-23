@@ -15,6 +15,10 @@ import tattoo13 from "../assets/tattoos/t-chest-angels.webp"
 import tattoo14 from "../assets/tattoos/t-leg-elephant.webp"
 import tattoo15 from "../assets/tattoos/t-leg-tfcisthis.webp"
 import tattoo16 from "../assets/tattoos/t-rib-tiger.webp"
+import tattoo17 from "../assets/tattoos/t-arm-viking.png"
+import tattoo18 from "../assets/tattoos/t-arm-shelby.png"
+import tattoo19 from "../assets/tattoos/t-arm-dragon.png"
+import tattoo20 from "../assets/tattoos/t-arm-angel-2.png"
 
 const Gallery = () => {
   return (
@@ -40,6 +44,10 @@ const Gallery = () => {
           <img className="rounded-lg" src={tattoo14} alt="Tattoo 14" />
           <img className="rounded-lg" src={tattoo15} alt="Tattoo 15" />
           <img className="rounded-lg" src={tattoo16} alt="Tattoo 16" />
+          <img className="rounded-lg" src={tattoo17} alt="Tattoo 17" />
+          <img className="rounded-lg" src={tattoo18} alt="Tattoo 18" />
+          <img className="rounded-lg" src={tattoo19} alt="Tattoo 19" />
+          <img className="rounded-lg" src={tattoo20} alt="Tattoo 20" />
 
         </Masonry>
       </div>
