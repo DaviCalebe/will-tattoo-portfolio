@@ -5,7 +5,7 @@ import studio from '../assets/studio.png'
 const About = () => {
   return (
     <section className='flex flex-col items-center justify-center flex-shrink-0 w-screen h-screen snap-center snap-always overflow-hidden pb-15'>
-     <div className="grid grid-cols-2 items-center justify-center">
+     <div className="grid grid-cols-2 gap-40 items-center justify-center">
 
       <div className="flex flex-col items-center justify-center">
         <div className="flex">
