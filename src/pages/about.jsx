@@ -1,24 +1,37 @@
-import React from 'react'
+import { motion } from 'framer-motion'
 import pin from '../assets/location-pin.png'
 import studio from '../assets/studio.png'
 
 const About = () => {
   return (
     <section className='flex flex-col items-center justify-center flex-shrink-0 w-screen h-screen snap-center snap-always overflow-hidden pb-15'>
-     <div className="grid grid-cols-2 gap-40 items-center justify-center">
+     <div className="grid grid-cols-3 gap-10 items-center justify-center">
 
-      <div className="flex flex-col items-center justify-center">
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="col-span-2 flex flex-col items-center justify-center gap-10 max-w-[800px]">
         <div className="flex">
-          <img src={pin} alt="" />
+          <img src={pin} alt="" className='h-20' />
           <div className="flex flex-col text-center">
             <h2 className='text-4xl font-semibold text-primary'>Estúdio</h2>
             <h3 className='text-3xl text-primary'>R. Jean Emile Favre, 559 - Ipsep</h3>
           </div>
         </div>
-          <img src={studio} className='w-[400px] h-[400px]' alt="" />
-      </div>  
+        <div className="flex">
+          <img src={studio} className='w-1/2 h-1/2' alt="" />
+          <img src={studio} className='w-1/2 h-1/2' alt="" />
+        </div>
+      </motion.div>  
 
-            <div className="flex flex-col items-center justify-center">
+      <motion.div
+        initial={{ opacity: 0, x: 20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="col-span-1 flex flex-col items-center justify-center">
         <div className="group relative w-[350px] h-[400px] m-5 rounded-[10px] border-2 border-primary overflow-hidden shadow-[0_0_10px_rgba(0,0,0,0.2)] transition-transform duration-500 ease-[cubic-bezier(0.215,0.61,0.355,1)] hover:-translate-y-2.5">
           <div className="bg-black w-full h-full p-5">
             <p className='text-primary'>  
@@ -32,10 +45,18 @@ const About = () => {
           </div>
         </div>
         <div className="relative flex items-center justify-center p-5">
-          <p className='absolute top-0 text-white text-xl -rotate-2'>Transforme sua pele em arte!</p>
-          <button className='bg-secondary text-center text-white text-xl p-5 rounded-lg'>Orçamento sem compromisso</button>
+          <p className='absolute top-0 z-40 text-white text-xl -rotate-2'>Transforme sua pele em arte!</p>
+          <motion.a
+            href="https://wa.me/55991999999"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.96 }}
+            className='bg-secondary text-center text-white text-xl p-5 rounded-lg shadow-[0_0_30px_rgba(255,255,255,0.9)] cursor-pointer'>
+            Orçamento sem compromisso
+          </motion.a>
         </div>
-      </div>
+      </motion.div>
      </div>
 
 
