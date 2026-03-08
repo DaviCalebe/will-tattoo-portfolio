@@ -1,5 +1,3 @@
-import { useEffect, useRef } from 'react'
-import { motion } from 'framer-motion'
 import Masonry from 'react-masonry-css'
 import GLightbox from 'glightbox'
 import "glightbox/dist/css/glightbox.min.css"
@@ -23,6 +21,8 @@ import tattoo17 from "../assets/tattoos/t-arm-viking.webp"
 import tattoo18 from "../assets/tattoos/t-arm-shelby.webp"
 import tattoo19 from "../assets/tattoos/t-arm-dragon.webp"
 import tattoo20 from "../assets/tattoos/t-arm-angel-2.webp"
+import { useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
 
 const tattoos = [
   tattoo1, tattoo2, tattoo3,

@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion'
 import profilepic from '../assets/IMG_0891.jpeg'
+import { motion } from 'framer-motion'
 
 const Intro = () => {
   return (
@@ -52,9 +52,11 @@ const Intro = () => {
           whileTap={{ scale: 0.96 }}
           className="flex items-center justify-center absolute bottom-1/7 left-1/2 -translate-x-1/2 z-40 bg-secondary w-xl h-20 rounded-3xl shadow-[0_0_30px_rgba(255,255,255,0.9)] cursor-pointer"
         >
-         <span className="text-[2.5rem] font-audiowide text-primary tracking-widest">
-            @WILL_TATUADOR__
-          </span>
+         <a
+          href='https://www.instagram.com/menorwill_tatuador'
+          className="text-[2.1rem] font-audiowide text-primary tracking-widest">
+            @MENORWILL_TATUADOR
+          </a>
         </motion.button>
 {/*         <div className="flex items-center justify-center absolute bottom-6 left-1/2 -translate-x-1/2 z-20 bg-primary w-lg h-20 rounded-3xl">
           <span className="text-[2.5rem] font-audiowide text-secondary tracking-widest">

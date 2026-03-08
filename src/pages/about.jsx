@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion'
 import pin from '../assets/location-pin.png'
 import studio from '../assets/studio.png'
+import { motion } from 'framer-motion'
 
 const About = () => {
   return (
@@ -47,7 +47,7 @@ const About = () => {
         <div className="relative flex items-center justify-center p-5">
           <p className='absolute top-0 z-40 text-white text-xl -rotate-2'>Transforme sua pele em arte!</p>
           <motion.a
-            href="https://wa.me/55991999999"
+            href=""
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.04 }}

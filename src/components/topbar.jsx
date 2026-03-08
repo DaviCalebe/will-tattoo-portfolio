@@ -1,4 +1,3 @@
-import React from 'react'
 import { motion } from 'framer-motion'
 import star from '../assets/star.png'
 import calendar from '../assets/calendar.png'
@@ -20,11 +19,16 @@ const Topbar = () => {
           initial={{ opacity: 0, y: -16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-
           className="flex items-center justify-evenly bg-primary w-52 h-10 rounded-b-lg">
-            <img src={calendar} alt="calendar" className="w-8 h-8 hover:cursor-pointer" />
-            <img src={whatsapp} alt="whatsapp" className="w-8 h-8 hover:cursor-pointer" />
-            <img src={instagram} alt="instagram" className="w-8 h-8 hover:cursor-pointer" />
+            <a href="" target='_blank' rel="noopener noreferrer">
+              <img src={calendar} alt="calendar" className="w-8 h-8 hover:cursor-pointer" />
+            </a>
+            <a href="" target='_blank' rel="noopener noreferrer">
+              <img src={whatsapp} alt="whatsapp" className="w-8 h-8 hover:cursor-pointer" />
+            </a>
+            <a href="https://www.instagram.com/menorwill_tatuador" target='_blank' rel="noopener noreferrer">
+              <img src={instagram} alt="instagram" className="w-8 h-8 hover:cursor-pointer" />
+            </a>
         </motion.div>
       </div>
   )
