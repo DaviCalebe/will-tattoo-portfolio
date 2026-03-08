@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
 import Masonry from 'react-masonry-css'
 import GLightbox from 'glightbox'
 import "glightbox/dist/css/glightbox.min.css"
@@ -60,7 +61,11 @@ const Gallery = () => {
         columnClassName='my-masonry-grid_column'
         >
           {tattoos.map((img, i) => (
-            <a
+            <motion.a
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
               key={i}
               href={img}
               onClick={(e) => {
@@ -69,7 +74,7 @@ const Gallery = () => {
               }}
             >
               <img src={img} alt={`Tattoo ${i + 1}`} className='rounded-lg mb-4' />
-            </a>
+            </motion.a>
           ))}
         </Masonry>
       </div>
