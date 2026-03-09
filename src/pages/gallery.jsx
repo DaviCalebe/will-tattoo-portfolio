@@ -55,7 +55,7 @@ const Gallery = () => {
 
   return (
     <section className='flex items-center justify-center flex-shrink-0 w-screen h-screen snap-center snap-always overflow-hidden pb-10'>
-      <div className="grid w-11/12 h-10/12 overflow-hidden overflow-y-auto scrollbar scrollbar-thumb-primary scrollbar-thumb-rounded-full scrollbar-track-transparent rounded-lg p-2">
+      <div data-vertical-scroll className="grid w-11/12 h-10/12 overflow-hidden overflow-y-auto scrollbar scrollbar-thumb-primary scrollbar-thumb-rounded-full scrollbar-track-transparent rounded-lg p-2">
         <Masonry breakpointCols={5}
         className='my-masonry-grid'
         columnClassName='my-masonry-grid_column'

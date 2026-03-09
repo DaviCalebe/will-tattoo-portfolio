@@ -14,7 +14,7 @@ function Pagination({ containerRef, active, sections }) {
   };
 
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-40">
+    <div className="pointer-events-none fixed bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-40">
       <AnimatePresence mode="wait">
         {active !== 0 && (
           <motion.span
@@ -30,7 +30,7 @@ function Pagination({ containerRef, active, sections }) {
         )}
       </AnimatePresence>
 
-      <div className="relative flex gap-3 p-1 rounded-full bg-white/10 backdrop-blur-sm">
+      <div className="pointer-events-auto relative flex gap-3 p-1 rounded-full bg-white/10 backdrop-blur-sm">
         {sections.map((_, i) => (
           <motion.button
             key={i}

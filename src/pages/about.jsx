@@ -50,7 +50,8 @@ const About = () => {
             href=""
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={{ scale: 1.04 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            whileHover={{ scale: 1.04, pointerEvents: "auto" }}
             whileTap={{ scale: 0.96 }}
             className='bg-secondary text-center text-white text-xl p-5 rounded-lg shadow-[0_0_30px_rgba(255,255,255,0.9)] cursor-pointer'>
             Orçamento sem compromisso

@@ -50,10 +50,12 @@ const Intro = () => {
           transition={{ duration: 0.4, ease: "easeOut" }}
           whileHover={{ scale: 1.04, pointerEvents: "auto" }}
           whileTap={{ scale: 0.96 }}
-          className="flex items-center justify-center absolute bottom-1/7 left-1/2 -translate-x-1/2 z-40 bg-secondary w-xl h-20 rounded-3xl shadow-[0_0_30px_rgba(255,255,255,0.9)] cursor-pointer"
+          className="flex items-center justify-center absolute bottom-12 left-1/2 -translate-x-1/2 z-40 bg-secondary w-xl h-24 rounded-3xl shadow-[0_0_30px_rgba(255,255,255,0.9)] cursor-pointer"
         >
          <a
           href='https://www.instagram.com/menorwill_tatuador'
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-[2.1rem] font-audiowide text-primary tracking-widest">
             @MENORWILL_TATUADOR
           </a>
