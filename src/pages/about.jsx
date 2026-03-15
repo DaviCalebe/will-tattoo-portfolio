@@ -17,7 +17,7 @@ const About = () => {
           <img src={pin} alt="" className='h-20' />
           <div className="flex flex-col text-center">
             <h2 className='text-4xl font-semibold text-primary'>Estúdio</h2>
-            <h3 className='text-3xl text-primary'>R. Jean Emile Favre, 559 - Ipsep</h3>
+            <a href='https://maps.app.goo.gl/ceN68woL7LWXWDEt6' target="_blank" rel="noopener noreferrer" className='text-3xl text-primary hover:text-blue-200 hover:underline'>R. Jean Emile Favre, 559 - Ipsep</a>
           </div>
         </div>
         <div className="flex">
@@ -32,15 +32,26 @@ const About = () => {
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 1, ease: "easeOut" }}
         className="col-span-1 flex flex-col items-center justify-center">
-        <div className="group relative w-[350px] h-[400px] m-5 rounded-[10px] border-2 border-primary overflow-hidden shadow-[0_0_10px_rgba(0,0,0,0.2)] transition-transform duration-500 ease-[cubic-bezier(0.215,0.61,0.355,1)] hover:-translate-y-2.5">
+        <div className="group relative text-base w-[350px] h-[400px] m-5 rounded-[10px] border-2 border-primary overflow-hidden shadow-[0_0_10px_rgba(0,0,0,0.2)] transition-transform duration-500 ease-[cubic-bezier(0.215,0.61,0.355,1)] hover:-translate-y-2.5">
           <div className="bg-black w-full h-full p-5">
-            <p className='text-primary'>  
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <p className='text-primary text-justify'>
+              {/* COMEÇO DA PARTE 1 */}
+              Minha arte vai além da estética. Cada tatuagem é criada a partir de uma escuta cuidadosa, respeito absoluto à individualidade do cliente e um padrão rigoroso de qualidade e excelência.
+
+Trabalho com a mentalidade de que tatuar é assumir responsabilidade sobre histórias, {/* FINAL DA PARTE 1 */}
+{/* COMEÇO DA PARTE 3 */}
+ Por isso, cada projeto nasce com intenção, significado e precisão técnica. Tatuar, para mim, é um compromisso com o alto nível, com o crescimento constante e com a evolução artística e pessoal. É um amor lapidado por disciplina, estudo e visão.
+Arte com propósito. Técnica com consciência. Mentalidade elevada. {/* FINAL DA PARTE 3 */}
+
             </p>
             
           </div>
           <div className="flex flex-col items-center absolute bottom-0 left-0 w-full h-[51%] px-5 bg-primary transition-transform duration-500 ease-[cubic-bezier(0.215,0.61,0.355,1)] group-hover:-translate-y-full">
-            <p className="text-base leading-[1.5] mb-2">consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p className="text-justify leading-[1.5] mb-2">{/* COMEÇO DA PARTE 2 */} símbolos e decisões que acompanham uma pessoa por toda a vida.
+
+Não sigo tendências vazias. Crio obras alinhadas à essência de quem procura mais do que uma tatuagem — procura identidade, motivação e verdade.
+{/* FINAL DA PARTE 2 */}
+</p>
             <button className="inline-block py-2.5 px-5 bg-black text-primary no-underline rounded">LER MAIS</button>
           </div>
         </div>
