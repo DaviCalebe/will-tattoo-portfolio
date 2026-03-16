@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 
 export function useHorizontalScroll(ref) {
+  
   useEffect(() => {
     const stageElement = ref.current;
     if (!stageElement) return;
 
     const handleWheel = (event) => {
-      // Looks for a parent marked as vertical scroll area
       const verticalScrollArea = event.target.closest("[data-vertical-scroll]");
 
       if (verticalScrollArea) {
@@ -18,18 +18,16 @@ export function useHorizontalScroll(ref) {
         const isScrollingUp = event.deltaY < 0;
         const isScrollingDown = event.deltaY > 0;
 
-        // If vertical scrolling is still possible, consume wheel here
         if (!(isAtTop && isScrollingUp) && !(isAtBottom && isScrollingDown)) {
           event.preventDefault();
           verticalScrollArea.scrollBy({
-          top: event.deltaY * 3,
-          behavior: "smooth",
+            top: event.deltaY * 3,
+            behavior: "smooth",
           });
           return;
         }
       }
 
-      // Fallback: page horizontal scroll
       event.preventDefault();
       stageElement.scrollBy({
         left: event.deltaY,
@@ -37,7 +35,26 @@ export function useHorizontalScroll(ref) {
       });
     };
 
+const handleKeyDown = (event) => {
+
+  if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return
+
+  event.preventDefault()
+
+  const direction = event.key === "ArrowRight" ? 1 : -1
+
+  stageElement.scrollBy({
+    left: window.innerWidth * direction,
+    behavior: "smooth",
+  })
+}
+
     stageElement.addEventListener("wheel", handleWheel, { passive: false });
-    return () => stageElement.removeEventListener("wheel", handleWheel);
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      stageElement.removeEventListener("wheel", handleWheel);
+      window.removeEventListener("keydown", handleKeyDown);
+    };
   }, [ref]);
 }
