@@ -19,11 +19,14 @@ function App() {
   const stageRef = useRef(null)
   const active = useActiveSection(stageRef)
   useHorizontalScroll(stageRef)
-
+  
   return (
     <div className='relative min-h-screen overflow-hidden'>
       <Topbar />
-      <Pagination containerRef={stageRef} active={active} sections={sections} />
+      <div className="hidden md:block">
+        <Pagination containerRef={stageRef} active={active} sections={sections} />
+
+      </div>
       <div
         className="fixed inset-0 bg-cover bg-center -z-10"
         style={{ backgroundImage: `url(${background})`}}
@@ -34,10 +37,10 @@ function App() {
         id="stage"
         className="
           h-screen w-screen
-          flex flex-row
-          overflow-x-scroll overflow-y-hidden
+          flex flex-col md:flex-row
+          overflow-y-scroll md:overflow-x-scroll md:overflow-y-hidden
           scroll-smooth
-          snap-x snap-mandatory
+          md:snap-x snap-mandatory
         "
       >
         <Intro />

@@ -4,8 +4,8 @@ import { motion } from 'framer-motion'
 
 const About = () => {
   return (
-    <section className='flex flex-col items-center justify-center flex-shrink-0 w-screen h-screen snap-center snap-always overflow-hidden pb-15'>
-     <div className="grid grid-cols-3 gap-10 items-center justify-center">
+    <section className='flex flex-col items-center justify-center flex-shrink-0 w-full md:w-screen h-auto md:h-screen snap-center snap-always overflow-hidden pb-15'>
+     <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center justify-center">
 
       <motion.div
         initial={{ opacity: 0, x: -20 }}

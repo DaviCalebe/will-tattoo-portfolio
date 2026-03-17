@@ -3,12 +3,12 @@ import { motion } from 'framer-motion'
 
 const Intro = () => {
   return (
-    <section className='relative flex items-center justify-center flex-shrink-0 w-screen h-screen snap-center snap-always overflow-hidden'>
+    <section className='relative flex items-center justify-center flex-shrink-0 w-full md:w-screen h-auto md:h-screen py-6 md:py-0 snap-center snap-always overflow-hidden'>
       <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 0.4, y: 0 }}
           transition={{ duration: 2, ease: "easeOut" }}
-        className="absolute inset-0 opacity-20 text-primary">
+        className="hidden md:block absolute inset-0 opacity-20 text-primary">
         {Array.from({ length: 12 }).map((_, i) => (
           <div
             key={i}

@@ -6,7 +6,11 @@ export function useHorizontalScroll(ref) {
     const stageElement = ref.current;
     if (!stageElement) return;
 
+    const isDesktop = () => window.innerWidth >= 768
+
     const handleWheel = (event) => {
+      if (!isDesktop()) return
+
       const verticalScrollArea = event.target.closest("[data-vertical-scroll]");
 
       if (verticalScrollArea) {
@@ -35,19 +39,20 @@ export function useHorizontalScroll(ref) {
       });
     };
 
-const handleKeyDown = (event) => {
+    const handleKeyDown = (event) => {
+      if (!isDesktop()) return
+      
+      if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return
 
-  if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return
+      event.preventDefault()
 
-  event.preventDefault()
+      const direction = event.key === "ArrowRight" ? 1 : -1
 
-  const direction = event.key === "ArrowRight" ? 1 : -1
-
-  stageElement.scrollBy({
-    left: window.innerWidth * direction,
-    behavior: "smooth",
-  })
-}
+      stageElement.scrollBy({
+        left: window.innerWidth * direction,
+        behavior: "smooth",
+      })
+    }
 
     stageElement.addEventListener("wheel", handleWheel, { passive: false });
     window.addEventListener("keydown", handleKeyDown);
