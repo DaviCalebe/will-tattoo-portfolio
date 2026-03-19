@@ -5,6 +5,9 @@
   --font-audiowide: 'Audiowide', sans-serif;
   --color-primary: #575757;
   --color-secondary: #00206C;
+  --breakpoint-xxs: 26rem;
+  --breakpoint-xs: 31rem;
+
 }
 
 #root {

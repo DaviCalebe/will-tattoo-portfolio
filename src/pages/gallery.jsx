@@ -54,9 +54,13 @@ const Gallery = () => {
   }, []);
 
   return (
-    <section className='flex items-center justify-center flex-shrink-0 w-screen h-screen snap-center snap-always overflow-hidden pb-10'>
-      <div data-vertical-scroll className="grid w-11/12 h-10/12 overflow-hidden overflow-y-auto scrollbar scrollbar-thumb-primary scrollbar-thumb-rounded-full scrollbar-track-transparent rounded-lg p-2">
-        <Masonry breakpointCols={5}
+    <section className='flex items-center justify-center flex-shrink-0 w-screen h-auto md:h-screen snap-center snap-always overflow-hidden pb-10'>
+      <div data-vertical-scroll className="grid w-11/12 h-auto md:h-10/12 md:overflow-hidden overflow-y-auto md:scrollbar md:scrollbar-thumb-primary md:scrollbar-thumb-rounded-full md:scrollbar-track-transparent rounded-lg p-2">
+        <Masonry breakpointCols={{
+          default: 5,
+          768:3,
+          420: 2
+        }}
         className='my-masonry-grid'
         columnClassName='my-masonry-grid_column'
         >
@@ -73,7 +77,7 @@ const Gallery = () => {
                 lightboxRef.current?.openAt(i);
               }}
             >
-              <img src={img} alt={`Tattoo ${i + 1}`} className='rounded-lg mb-4' />
+              <img src={img} alt={`Tattoo ${i + 1}`} className='rounded-lg mb-4 w-full' />
             </motion.a>
           ))}
         </Masonry>

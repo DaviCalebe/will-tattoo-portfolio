@@ -21,9 +21,9 @@ const Intro = () => {
         ))}
       </motion.div>
 
-      <div className="relative">
+      <div className="relative w-full my-10">
         <motion.div
-          className="w-[423px] h-[564px] rounded-full overflow-hidden mx-auto my-10 shadow-2xl shadow-red-100"
+          className="w-[70%] max-w-[423px] max-h-[564px] aspect-[423/564] rounded-full overflow-hidden mx-auto shadow-2xl shadow-red-100"
           initial={{ opacity: 0, x: 40, scale: 0.92 }}
           animate={{
             opacity: 1,
@@ -50,13 +50,13 @@ const Intro = () => {
           transition={{ duration: 0.4, ease: "easeOut" }}
           whileHover={{ scale: 1.04, pointerEvents: "auto" }}
           whileTap={{ scale: 0.96 }}
-          className="flex items-center justify-center absolute bottom-12 left-1/2 -translate-x-1/2 z-40 bg-secondary w-xl h-24 rounded-3xl shadow-[0_0_30px_rgba(255,255,255,0.9)] cursor-pointer"
+          className="flex items-center justify-center absolute bottom-12 left-1/2 -translate-x-1/2 z-40 bg-secondary w-[80%] md:w-xl h-24 rounded-3xl shadow-[0_0_30px_rgba(255,255,255,0.9)] cursor-pointer"
         >
          <a
           href='https://www.instagram.com/menorwill_tatuador'
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[2.1rem] font-audiowide text-primary tracking-widest">
+          className="w-full xxs:text-xl xs:text-2xl sm:text-3xl md:text-[2.1rem] font-audiowide text-primary tracking-widest">
             @MENORWILL_TATUADOR
           </a>
         </motion.button>

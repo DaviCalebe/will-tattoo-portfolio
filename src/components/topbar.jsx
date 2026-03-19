@@ -6,8 +6,8 @@ import instagram from '../assets/instagram.png'
 
 const Topbar = () => {
   return (
-      <div className="pointer-events-none flex justify-between px-16 fixed top-0 z-40 w-full h-10 bg-transparent">
-        <div className="flex gap-4">
+      <div className="pointer-events-none flex justify-center xs:justify-between px-4 md:px-16 fixed top-0 z-40 w-full h-10 bg-transparent">
+        <div className="hidden xs:flex gap-4">
           <img src={star} alt="star" className="w-9 h-9" />
           <img src={star} alt="star" className="w-9 h-9" />
           <img src={star} alt="star" className="w-9 h-9" />
