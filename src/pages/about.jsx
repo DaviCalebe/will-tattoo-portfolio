@@ -8,14 +8,14 @@ const About = () => {
 
   return (
     <section className='flex flex-col items-center justify-center flex-shrink-0 w-full md:w-screen h-auto md:h-screen snap-center snap-always overflow-hidden pb-15'>
-     <div className="grid grid-cols-1 md:grid-cols-3 md:gap-10 items-center justify-center">
+     <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] md:gap-5 items-center justify-center">
 
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="col-span-2 flex flex-col items-center justify-center gap-10 max-w-[800px]">
+        className="flex flex-col items-center justify-center m-5 md:gap-10 w-full h-full max-w-[800px]">
         <div className="flex">
           <img src={pin} alt="" className='h-16 md:h-20' />
           <div className="flex flex-col text-center items-center justify-center">
@@ -23,9 +23,9 @@ const About = () => {
             <a href='https://maps.app.goo.gl/ceN68woL7LWXWDEt6' target="_blank" rel="noopener noreferrer" className='text-2xl md:text-3xl text-primary hover:text-blue-200 hover:underline'>R. Jean Emile Favre, 559 - Ipsep</a>
           </div>
         </div>
-        <div className="flex w-full h-full items-center justify-center">
-          <img src={studio} className='w-1/2 h-1/2' alt="" />
-          <img src={studio} className='hidden md:block w-1/2 h-1/2' alt="" />
+        <div className="flex w-full items-center justify-center">
+          <img src={studio} className='min-w-[350px] w-3/4' alt="" />
+          <img src={studio} className='hidden xl:block min-w-[350px] w-3/4' alt="" />
         </div>
       </motion.div>  
 
@@ -34,10 +34,10 @@ const About = () => {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="col-span-1 flex flex-col items-center justify-center">
+        className="flex flex-col items-center justify-center m-5 gap-5">
         <div
           onClick={() => setOpen(!open)}
-          className="group relative text-base w-[350px] h-[400px] m-5 rounded-[10px] border-2 border-primary overflow-hidden shadow-[0_0_10px_rgba(0,0,0,0.2)] transition-transform duration-500 ease-[cubic-bezier(0.215,0.61,0.355,1)] hover:-translate-y-2.5">
+          className="group relative text-base w-[350px] h-[400px] rounded-[10px] border-2 border-primary overflow-hidden shadow-[0_0_10px_rgba(0,0,0,0.2)] transition-transform duration-500 ease-[cubic-bezier(0.215,0.61,0.355,1)] hover:-translate-y-2.5">
           <div className="bg-black w-full h-full p-5">
             <p className='text-primary text-justify'>
               {/* COMEÇO DA PARTE 1 */}
