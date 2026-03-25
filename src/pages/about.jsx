@@ -15,7 +15,7 @@ const About = () => {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="flex flex-col items-center justify-center m-5 md:gap-10 w-full h-full max-w-[800px]">
+        className="flex flex-col items-center justify-center md:m-5 md:gap-10 w-full h-full max-w-[800px]">
         <div className="flex">
           <img src={pin} alt="" className='h-16 md:h-20' />
           <div className="flex flex-col text-center items-center justify-center">
