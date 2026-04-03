@@ -1,4 +1,4 @@
-import background from './assets/background.jpg'
+import background from './assets/background-2.jpg'
 import Intro from './pages/intro'
 import Gallery from './pages/gallery'
 import Testimonials from './pages/testimonials'
