@@ -37,7 +37,7 @@ function Pagination({ containerRef, active, sections }) {
             onClick={() => scrollToIndex(i)}
             whileHover={{ scale: 1.12 }}
             whileTap={{ scale: 0.92 }}
-            className="relative w-3 h-3 rounded-full cursor-pointer"
+            className="relative w-[18px] h-[18px] rounded-full cursor-pointer"
             aria-label={`Ir para seção ${i + 1}`}
           >
             {active === i && (

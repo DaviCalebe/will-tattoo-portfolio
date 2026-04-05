@@ -74,11 +74,6 @@ const Gallery = () => {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               key={i}
-              href={img}
-              onClick={(e) => {
-                e.preventDefault();
-                lightboxRef.current?.openAt(i);
-              }}
             >
               <img src={img} alt={`Tattoo ${i + 1}`} className='rounded-lg mb-4 w-full' />
             </motion.a>

@@ -41,11 +41,12 @@ const About = () => {
 
             </div>
 
-            <h1 className="flex justify-center items-center h-20 text-white text-8xl font-audiowide tracking-widest mb-14">BIO</h1>
+            <h1 className="flex h-20 text-white text-8xl font-audiowide tracking-widest mb-14">BIO</h1>
             <div className="pr-12">
               <span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque est purus, placerat posuere nulla vestibulum quis. Morbi dictum sollicitudin elit, et volutpat sem tempus a. Proin nec eleifend justo, eget mollis eros. Fusce vehicula leo ac velit facilisis interdum. Fusce porta orci metus, consectetur imperdiet justo ullamcorper dignissim. Nam quis odio id ex varius accumsan eget non mi. In vestibulum placerat iaculis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt sapien ac leo viverra, quis venenatis ligula fringilla. Nulla fermentum pharetra ultrices. Aliquam at tellus consectetur, tincidunt quam non, varius justo. Praesent gravida viverra interdum. Morbi tincidunt molestie ultrices. Integer vitae iaculis mi. Praesent finibus a orci ut hendrerit. Pellentesque facilisis consequat lobortis. Quisque lorem urna, venenatis id enim elementum, dignissim eleifend tellus. Donec hendrerit fringilla ipsum. Morbi vel felis nunc. Ut congue, augue et rutrum condimentum, justo lectus tempor enim, vel elementum lacus ligula quis diam. Vivamus pulvinar sem nisl, nec rutrum ligula venenatis eget. Sed a vestibulum turpis. In eleifend metus id ante elementum, pretium luctus urna pretium. Phasellus sit amet ante erat. Nam vel ante sed tellus accumsan rutrum in eget nibh.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque est purus, placerat posuere nulla vestibulum quis. Morbi dictum sollicitudin elit, et volutpat sem tempus a. Proin nec eleifend justo, eget mollis eros. Fusce vehicula leo ac velit facilisis interdum. Fusce porta orci metus, consectetur imperdiet justo ullamcorper dignissim. Nam quis odio id ex varius accumsan eget non mi. In vestibulum placerat iaculis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt sapien ac leo viverra, quis venenatis ligula fringilla. Nulla fermentum pharetra ultrices. Aliquam at tellus consectetur, tincidunt quam non, varius justo. Praesent gravida viverra interdum. Morbi tincidunt molestie ultrices. Integer vitae iaculis mi. Praesent finibus a orci ut hendrerit. Pellentesque facilisis consequat lobortis. Quisque lorem urna, venenatis id enim elementum, dignissim eleifend tellus. Donec hendrerit fringilla ipsum. Morbi vel felis nunc.
               </span>
+              <h2 className='text-3xl text-white'>Arte com propósito. Técnica com consciência. Mentalidade elevada.</h2>
 
             </div>
           </div>
