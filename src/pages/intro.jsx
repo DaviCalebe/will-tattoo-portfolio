@@ -10,7 +10,7 @@ const Intro = () => {
           <div className="absolute inset-0 bg-black/30" />
         </div>
       <div className="relative w-full h-full max-h-10/12 my-10 flex flex-col items-center gap-6 md:block">
-        <span className='absolute top-0 right-0 font-audiowide text-white p-8'>ROLE A TELA ↑↓ OU USE AS TECLAS ←→</span>
+        <span className='absolute top-25 right-0 font-audiowide text-white p-8'>ROLE A TELA ↑↓ OU USE AS TECLAS ←→</span>
         <div className='absolute bottom-0 right-0 flex flex-col gap-4 font-audiowide uppercase text-7xl text-right text-white p-8'>
           <a href="">
             GALERIA

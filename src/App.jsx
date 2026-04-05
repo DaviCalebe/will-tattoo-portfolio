@@ -28,7 +28,7 @@ function App() {
 
       </div>
       <div
-        className="fixed inset-0 bg-cover bg-center -z-10"
+        className="fixed inset-0 bg-cover bg-center -z-20"
         style={{ backgroundImage: `url(${background})`}}
       />
 
