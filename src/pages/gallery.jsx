@@ -26,13 +26,7 @@ import { motion } from 'framer-motion'
 import { useIsMdUp } from '../hooks/useIsMdUp'
 
 const tattoos = [
-  tattoo1, tattoo2, tattoo3,
-  tattoo4, tattoo5, tattoo6,
-  tattoo7, tattoo8, tattoo9,
-  tattoo10, tattoo11, tattoo12,
-  tattoo13, tattoo14, tattoo15,
-  tattoo16, tattoo17, tattoo18,
-  tattoo19, tattoo20,
+  tattoo11, tattoo14, tattoo18, tattoo7, tattoo15, tattoo20, tattoo6, tattoo13, tattoo1, tattoo17, tattoo8, tattoo10, tattoo3, tattoo5, tattoo19, tattoo12, tattoo2, tattoo9, tattoo4, tattoo16
 ]
 
 const Gallery = () => {
@@ -75,7 +69,15 @@ const Gallery = () => {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               key={i}
             >
-              <img src={img} alt={`Tattoo ${i + 1}`} className='rounded-lg mb-4 w-full' />
+              <img
+  src={img}
+  alt={`Tattoo ${i + 1}`}
+  className='rounded-lg mb-4 w-full'
+  onLoad={(e) => {
+    const { naturalWidth, naturalHeight } = e.target;
+    console.log(`tattoo${i + 1}: ${naturalWidth}x${naturalHeight}`);
+  }}
+/>
             </motion.a>
           ))}
         </Masonry>
