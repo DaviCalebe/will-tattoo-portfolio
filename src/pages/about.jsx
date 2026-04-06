@@ -1,7 +1,6 @@
 import pin from '../assets/location-pin.png'
 import studio from '../assets/studio.png'
-import vector from '../assets/vector 2.png'
-import { motion } from 'framer-motion'
+import vector from '../assets/Vector2.png'
 import { useIsMdUp } from '../hooks/useIsMdUp'
 
 const About = () => {
