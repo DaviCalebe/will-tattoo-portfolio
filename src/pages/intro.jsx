@@ -1,4 +1,4 @@
-import profilepic from '../assets/profilepic.jpg'
+import profilepic from '../assets/profilepic.JPG'
 import { motion } from 'framer-motion'
 
 const Intro = () => {

@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import star from '../assets/star-fulfilled.png'
 import calendar from '../assets/calendar.png'
 import whatsapp from '../assets/whatsapp.png'
 import instagram from '../assets/instagram.png'
