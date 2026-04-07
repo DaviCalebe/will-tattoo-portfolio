@@ -12,13 +12,16 @@ const Intro = () => {
       <div className="relative w-full h-full max-h-10/12 my-10 flex flex-col items-center gap-6 md:block">
         <span className='absolute top-25 right-0 font-audiowide text-white p-8'>ROLE A TELA ↑↓ OU USE AS TECLAS ←→</span>
         <div className='absolute bottom-0 right-0 flex flex-col gap-4 font-audiowide uppercase text-7xl text-right text-white p-8'>
-          <a href="">
+          <a href="#gallery" className='group flex items-center justify-end gap-2 hover:text-primary'>
+            <span className='opacity-0 group-hover:opacity-100 text-white text-6xl transition-opacity'>{'>'}</span>
             GALERIA
           </a>
-          <a href="">
+          <a href="#testimonials" className='group flex items-center justify-end gap-2 hover:text-primary'>
+            <span className='opacity-0 group-hover:opacity-100 text-white text-6xl transition-opacity'>{'>'}</span>
             FEEDBACKS
           </a>
-          <a href="">
+          <a href="#about" className='group flex items-center justify-end gap-2 hover:text-primary'>
+            <span className='opacity-0 group-hover:opacity-100 text-white text-6xl transition-opacity'>{'>'}</span>
             SOBRE
           </a>
         </div>

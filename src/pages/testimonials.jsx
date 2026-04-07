@@ -5,7 +5,7 @@ const Testimonials = () => {
   const isMobile = !useIsMdUp();
 
   return (
-    <section className='flex flex-col gap-10 items-center justify-center flex-shrink-0 w-screen h-screen snap-center snap-always pb-10'>
+    <section id='testimonials' className='flex flex-col gap-10 items-center justify-center flex-shrink-0 w-screen h-screen snap-center snap-always pb-10'>
       {isMobile && <h1 id='testimonials' className="font-audiowide text-4xl text-black bg-primary w-full text-start p-5">DEPOIMENTOS</h1>}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

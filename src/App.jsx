@@ -22,11 +22,12 @@ function App() {
   
   return (
     <div className='relative min-h-screen overflow-hidden'>
-      <Topbar />
+      <Topbar active={active} />
+
       <div className="hidden md:block">
         <Pagination containerRef={stageRef} active={active} sections={sections} />
-
       </div>
+
       <div
         className="fixed inset-0 bg-cover bg-center -z-20"
         style={{ backgroundImage: `url(${background})`}}

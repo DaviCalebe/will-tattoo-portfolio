@@ -50,7 +50,7 @@ const Gallery = () => {
   }, []);
 
   return (
-    <section className='flex flex-col items-center justify-center flex-shrink-0 w-screen gap-10 h-[170rem] md:h-screen snap-center snap-always overflow-hidden pb-10'>
+    <section id='gallery' className='flex flex-col items-center justify-center flex-shrink-0 w-screen gap-10 h-[170rem] md:h-screen snap-center snap-always overflow-hidden pb-10'>
       {isMobile && <h1 id='gallery' className="font-audiowide text-4xl text-black bg-primary w-full text-start p-5">GALERIA</h1>}
       <div data-vertical-scroll className="grid w-11/12 h-auto md:h-10/12 md:overflow-hidden overflow-y-auto md:scrollbar md:scrollbar-thumb-primary md:scrollbar-thumb-rounded-full md:scrollbar-track-transparent rounded-lg p-2">
         <Masonry breakpointCols={{
