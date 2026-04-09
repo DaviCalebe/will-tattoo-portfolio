@@ -1,15 +1,31 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export function useHorizontalScroll(ref) {
-  
+  const currentPage = useRef(0);
+  const isScrolling = useRef(false);
+
   useEffect(() => {
     const stageElement = ref.current;
     if (!stageElement) return;
 
-    const isDesktop = () => window.innerWidth >= 768
+    const isDesktop = () => window.innerWidth >= 768;
+    const totalPages = () => Math.round(stageElement.scrollWidth / window.innerWidth);
+
+    const goToPage = (page) => {
+      const total = totalPages();
+      currentPage.current = (page + total) % total;
+
+      stageElement.scrollTo({
+        left: currentPage.current * window.innerWidth,
+        behavior: "smooth",
+      });
+
+      isScrolling.current = true;
+      setTimeout(() => { isScrolling.current = false; }, 800);
+    };
 
     const handleWheel = (event) => {
-      if (!isDesktop()) return
+      if (!isDesktop()) return;
 
       const verticalScrollArea = event.target.closest("[data-vertical-scroll]");
 
@@ -33,26 +49,21 @@ export function useHorizontalScroll(ref) {
       }
 
       event.preventDefault();
-      stageElement.scrollBy({
-        left: event.deltaY,
-        behavior: "auto",
-      });
+      if (isScrolling.current) return;
+
+      const direction = event.deltaY > 0 ? 1 : -1;
+      goToPage(currentPage.current + direction);
     };
 
     const handleKeyDown = (event) => {
-      if (!isDesktop()) return
-      
-      if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return
+      if (!isDesktop()) return;
+      if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+      if (isScrolling.current) return;
 
-      event.preventDefault()
-
-      const direction = event.key === "ArrowRight" ? 1 : -1
-
-      stageElement.scrollBy({
-        left: window.innerWidth * direction,
-        behavior: "smooth",
-      })
-    }
+      event.preventDefault();
+      const direction = event.key === "ArrowRight" ? 1 : -1;
+      goToPage(currentPage.current + direction);
+    };
 
     stageElement.addEventListener("wheel", handleWheel, { passive: false });
     window.addEventListener("keydown", handleKeyDown);
