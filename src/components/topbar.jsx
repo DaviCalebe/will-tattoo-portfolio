@@ -42,7 +42,7 @@ const Topbar = ({ active }) => {
           href=""
           target="_blank"
           rel="noopener noreferrer"
-          className="flex justify-center items-center gap-4 bg-white border border-black rounded-full overflow-hidden"
+          className="flex justify-center items-center gap-4 bg-white hover:bg-gray-300 border border-black rounded-full overflow-hidden"
           animate={{
             height: cal.height,
             paddingLeft: cal.paddingX,
@@ -74,7 +74,7 @@ const Topbar = ({ active }) => {
           href=""
           target="_blank"
           rel="noopener noreferrer"
-          className="flex justify-center items-center bg-black border border-white rounded-full"
+          className="flex justify-center items-center bg-black hover:bg-gray-500 border border-white rounded-full"
           animate={{ width: sizes.whatsapp, height: sizes.whatsapp }}
           transition={{ type: "spring", stiffness: 500, damping: 30 }}
         >
@@ -85,7 +85,7 @@ const Topbar = ({ active }) => {
           href="https://www.instagram.com/menorwill_tatuador"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex justify-center items-center bg-black border border-white rounded-full"
+          className="flex justify-center items-center bg-black hover:bg-gray-500 border border-white rounded-full"
           animate={{ width: sizes.instagram, height: sizes.instagram }}
           transition={{ type: "spring", stiffness: 500, damping: 30 }}
         >

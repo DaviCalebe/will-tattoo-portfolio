@@ -25,6 +25,7 @@ function Pagination({ containerRef, active, sections }) {
           initial={{ opacity: 0, x: 8 }}
           animate={{ opacity: 1, x: 0}}
           exit={{ opacity: 0, x: -8 }}
+          whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.92 }}
           onClick={() => scrollToIndex( active - 1)}
           className="pointer-events-auto rounded-full hover:cursor-pointer"
@@ -91,6 +92,7 @@ function Pagination({ containerRef, active, sections }) {
               initial={{ opacity: 0, x: -8 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 8}}
+              whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.92 }}
               onClick={() => scrollToIndex( active + 1)}
               className="pointer-events-auto rounded-full hover:cursor-pointer"
