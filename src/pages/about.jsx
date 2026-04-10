@@ -1,15 +1,17 @@
 import pin from '../assets/location-pin.png'
 import studio from '../assets/studio.png'
 import vector from '../assets/Vector2.png'
-import { useIsMdUp } from '../hooks/useIsMdUp'
+import { useBreakpoint } from '../hooks/useBreakpoint'
 
 const About = () => {
-  const isMobile = !useIsMdUp();
+  
+  const isMobile = !useBreakpoint().md;
 
   return (
     <section id='about' className='relative flex flex-col items-center justify-center flex-shrink-0 gap-10 w-full md:w-screen h-[78rem] md:h-screen snap-center snap-always overflow-hidden'>
       
-      {isMobile && <h1 id='about' className="font-audiowide text-4xl text-black bg-primary w-full text-start p-5">SOBRE</h1>}
+      {isMobile && <h1 id='about' className="font-audiowide tracking-wide text-5xl w-full text-start p-4 text-black bg-primary">SOBRE</h1>}
+      
       <img src={vector} alt="" className='absolute top-0 right-0 -z-10 w-4/6 h-screen'/>
 {/*       <div className="absolute bottom-0 right-0 w-2/5 h-2/3 [clip-path:ellipse(100%_100%_at_100%_100%)]">
         

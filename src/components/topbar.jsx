@@ -1,28 +1,32 @@
 import { motion } from 'framer-motion'
+import { useBreakpoint } from '../hooks/useBreakpoint'
 import calendar from '../assets/calendar.png'
 import whatsapp from '../assets/whatsapp.png'
 import instagram from '../assets/instagram.png'
 
 const Topbar = ({ active }) => {
+  const { md, lg } = useBreakpoint()
 
   const calendarSizes = {
-    0: { height: 56, paddingX: 16 },
+    0: { height: lg ? 56 : 44, paddingX: lg? 16 : 12 },
     1: { height: 44, paddingX: 12 },
     2: { height: 44, paddingX: 12 },
-    3: { height: 56, paddingX: 16 },
+    3: { height: lg ? 56 : 44, paddingX: lg ? 16 : 12 },
   }
 
   const iconSizes = {
-    0: { whatsapp: 56, instagram: 56 },
+    0: { whatsapp: lg ? 56 : 44, instagram: lg ? 56 : 44 },
     1: { whatsapp: 44, instagram: 44 },
     2: { whatsapp: 44, instagram: 44 },
-    3: { whatsapp: 56, instagram: 56 },
+    3: { whatsapp: lg ? 56 : 44, instagram: lg ? 56 : 44 },
   }
 
   const cal = calendarSizes[active] ?? calendarSizes[0]
   const sizes = iconSizes[active] ?? iconSizes[0]
 
   return (
+    md ? (
+
     <div className="pointer-events-none flex justify-center items-center xs:justify-between px-4 md:px-8 fixed top-0 z-40 w-full h-auto bg-transparent">
       <div className="hidden xs:flex gap-4">
 {/*           <img src={star} alt="star" className="w-9 h-9" />
@@ -93,7 +97,15 @@ const Topbar = ({ active }) => {
         </motion.a>
       </motion.div>
     </div>
-  )
+    ) 
+    :
+    (
+      <div className="flex justify-center items-center px-4 fixed top-0 z-40 w-full h-18 bg-black border-b-6 border-b-primary">
+
+      </div>
+
+    )
+  ) 
 }
 
 export default Topbar
