@@ -17,20 +17,67 @@ const Intro = () => {
       </div>
         <span className='hidden md:block absolute top-25 right-0 font-audiowide text-md text-white p-8'>ROLE A TELA ↑↓ OU USE AS TECLAS ←→</span>
         
-        <div className='absolute bottom-0 right-0 hidden md:flex flex-col gap-4 font-audiowide uppercase md:text-5xl lg:text-7xl text-right text-white p-8'>
-          <a href="#gallery" className='group flex items-center justify-end gap-2 text-[#aaa] hover:text-white [-webkit-text-stroke:2px_#fff]'>
-            <span className='opacity-0 group-hover:opacity-100 text-white md:text-4xl lg:text-6xl transition-opacity'>{'>'}</span>
+      <div className='absolute bottom-0 right-0 hidden md:flex flex-col gap-4 font-audiowide uppercase md:text-5xl lg:text-7xl text-right text-white p-8'>
+        <motion.a
+          href="#gallery"
+          className='group flex items-center justify-end gap-2 w-fit self-end'
+          initial="rest"
+          whileHover="hover"
+        >
+          <motion.span
+            variants={{
+              rest: { opacity: 0, x: 20 },
+              hover: { opacity: 1, x: 0 }
+            }}
+            className='text-white md:text-4xl lg:text-6xl'
+          >
+            {'>'}
+          </motion.span>
+          <span className='text-[#aaa] group-hover:text-white [-webkit-text-stroke:2px_#fff] transition-colors'>
             GALERIA
-          </a>
-          <a href="#testimonials" className='group flex items-center justify-end gap-2 text-[#aaa] hover:text-white [-webkit-text-stroke:2px_#fff]'>
-            <span className='opacity-0 group-hover:opacity-100 text-white md:text-4xl lg:text-6xl transition-opacity'>{'>'}</span>
-            FEEDBACKS
-          </a>
-          <a href="#about" className='group flex items-center justify-end gap-2 text-[#aaa] hover:text-white [-webkit-text-stroke:2px_#fff]'>
-            <span className='opacity-0 group-hover:opacity-100 text-white md:text-4xl lg:text-6xl transition-opacity'>{'>'}</span>
+          </span>
+        </motion.a>
+
+        <motion.a
+          href="#testimonials"
+          className='group flex items-center justify-end gap-2 w-fit self-end'
+          initial="rest"
+          whileHover="hover"
+        >
+          <motion.span
+            variants={{
+              rest: { opacity: 0, x: 20 },
+              hover: { opacity: 1, x: 0 }
+            }}
+            className='text-white md:text-4xl lg:text-6xl'
+          >
+            {'>'}
+          </motion.span>
+          <span className='text-[#aaa] group-hover:text-white [-webkit-text-stroke:2px_#fff] transition-colors'>
+            DEPOIMENTOS
+          </span>
+        </motion.a>
+
+        <motion.a
+          href="#about"
+          className='group flex items-center justify-end gap-2 w-fit self-end'
+          initial="rest"
+          whileHover="hover"
+        >
+          <motion.span
+            variants={{
+              rest: { opacity: 0, x: 20 },
+              hover: { opacity: 1, x: 0 }
+            }}
+            className='text-white md:text-4xl lg:text-6xl'
+          >
+            {'>'}
+          </motion.span>
+          <span className='text-[#aaa] group-hover:text-white [-webkit-text-stroke:2px_#fff] transition-colors'>
             SOBRE
-          </a>
-        </div>
+          </span>
+        </motion.a>
+      </div>
         
       </div>
     </section>
