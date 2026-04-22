@@ -6,7 +6,7 @@ function DropdownButton({ index, activeIndex, setActiveIndex, title, children })
 
   return (
     <motion.div
-      className='flex flex-col w-96 p-4 bg-black border border-white rounded-3xl overflow-hidden cursor-pointer'
+      className='flex flex-col w-full p-4 bg-black border border-white rounded-3xl overflow-hidden cursor-pointer'
       onClick={() => setActiveIndex(isOpen ? null : index)}
     >
       <div className="flex w-full items-center justify-between">
@@ -18,7 +18,7 @@ function DropdownButton({ index, activeIndex, setActiveIndex, title, children })
             alt="arrow"
             className='w-6 h-6'
             animate={{ rotate: isOpen ? 180 : 0}}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.6 }}
         />
       </div>
 
@@ -27,7 +27,7 @@ function DropdownButton({ index, activeIndex, setActiveIndex, title, children })
         animate={{
           maxHeight: isOpen ? 200 : 0
         }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: isOpen ? 0.6 : 0.3 }}
         className="overflow-hidden"
       >
         <div className="text-justify mt-3 text-sm text-white">

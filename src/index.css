@@ -10,6 +10,19 @@
 
 }
 
+@keyframes shine {
+  0% {
+    transform: translateX(-150%) skewX(12deg);
+  }
+  100% {
+    transform: translateX(250%) skewX(12deg);
+  }
+}
+
+.shine {
+  animation: shine 5s linear infinite;
+}
+
 #root {
   margin: 0;
   padding: 0;
