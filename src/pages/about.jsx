@@ -1,5 +1,5 @@
-import pin from '../assets/location-pin.png'
-import studio from '../assets/studio.png'
+import pin from '../assets/pin.png'
+import studio from '../assets/studio.webp'
 import arrow from '../assets/arrow-dropdown.png'
 import { useBreakpoint } from '../hooks/useBreakpoint'
 import { motion } from "framer-motion";
@@ -45,19 +45,30 @@ const About = () => {
             </DropdownButton>
           </div>
 
-          <div className="flex flex-col items-center justify-center gap-4">
+          <div className="flex w-full h-[370px] p-2 pt-0">
 
-            <div className="w-2/5 h-2/5">
-              <img src={studio} alt="studio" className="w-full h-full object-cover"/>
-            </div>
-            
-            <div className="flex">
-              <img src={pin} alt="pin" className='h-14'/>
-              <div className="flex flex-col text-white text-start items-center justify-center">
-                <h2 className='text-2xl w-full font-semibold  text-start'>Estúdio</h2>
-                <a href='https://maps.app.goo.gl/ceN68woL7LWXWDEt6' target="_blank" rel="noopener noreferrer" className='text-xl hover:text-blue-200 hover:underline'>R. Jean Emile Favre, 559</a>
+            <div className="flex flex-row w-full rounded-tl-3xl rounded-3xl bg-black border border-white  overflow-hidden">
+              <img 
+                src={studio} 
+                alt="studio" 
+                className="w-full h-full opacity-90 object-cover"
+              />
+
+              <div className="flex justify-center items-center gap-2 w-full h-full bg-black text-primary">
+                <img src={pin} alt="pin" className='w-12 h-12' />
+                <span className='text-xl'>
+                  Ver no mapa
+                </span>
               </div>
+
             </div>
+
+{/*             <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.9370403190483!2d-34.91574514999999!3d-8.107893550000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1ef869a41849%3A0x37190fa435b75b3a!2sR.%20Jean%20Emile%20Favre%2C%20559%20-%20Ipsep%2C%20Recife%20-%20PE%2C%2051200-060!5e0!3m2!1spt-BR!2sbr!4v1776973324032!5m2!1spt-BR!2sbr"
+              className="w-full h-full border-0"
+              loading="lazy"
+              allowFullScreen
+            /> */}
 
           </div>
           
@@ -66,8 +77,8 @@ const About = () => {
         <div className="relative overflow-hidden w-full">
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute top-0 w-[100%] h-full 
-              bg-gradient-to-r from-transparent via-white/10 to-transparent 
-              blur-sm shine" />
+              bg-gradient-to-r from-transparent via-white/30 to-transparent 
+              blur-sm " />
           </div>
 
           <button className="w-full text-white text-3xl bg-[#1A1A1A] p-6 cursor-pointer">

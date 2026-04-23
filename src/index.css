@@ -12,15 +12,15 @@
 
 @keyframes shine {
   0% {
-    transform: translateX(-150%) skewX(12deg);
+    transform: translateX(-100%) skewX(12deg);
   }
   100% {
-    transform: translateX(250%) skewX(12deg);
+    transform: translateX(200%) skewX(12deg);
   }
 }
 
 .shine {
-  animation: shine 5s linear infinite;
+  animation: shine 3s linear infinite;
 }
 
 #root {
