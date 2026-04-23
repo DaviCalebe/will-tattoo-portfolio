@@ -19,7 +19,7 @@ const About = () => {
       <div className="flex flex-col justify-evenly w-full h-9/12">
       
         <div className="grid grid-cols-2 items-center justify-center gap-6">
-          <div className="flex flex-col gap-4 h-full max-h-full pl-8">
+          <div className="flex flex-col gap-2 h-full max-h-full pl-8">
             <DropdownButton index={1} activeIndex={activeIndex} setActiveIndex={setActiveIndex} title="POR QUE REALISMO?">
               <div className="text-justify">
                 <span className='text-sm text-white'>
@@ -48,14 +48,14 @@ const About = () => {
           <div className="flex flex-col items-center justify-center gap-4">
 
             <div className="w-2/5 h-2/5">
-              <img src={studio} alt="studio" className="w-full h-full object-cover" />
+              <img src={studio} alt="studio" className="w-full h-full object-cover"/>
             </div>
             
             <div className="flex">
-              <img src={pin} alt="pin" className='h-16' />
+              <img src={pin} alt="pin" className='h-14'/>
               <div className="flex flex-col text-white text-start items-center justify-center">
-                <h2 className='text-3xl w-full font-semibold  text-start'>Estúdio</h2>
-                <a href='https://maps.app.goo.gl/ceN68woL7LWXWDEt6' target="_blank" rel="noopener noreferrer" className='text-2xl hover:text-blue-200 hover:underline'>R. Jean Emile Favre, 559 - Ipsep</a>
+                <h2 className='text-2xl w-full font-semibold  text-start'>Estúdio</h2>
+                <a href='https://maps.app.goo.gl/ceN68woL7LWXWDEt6' target="_blank" rel="noopener noreferrer" className='text-xl hover:text-blue-200 hover:underline'>R. Jean Emile Favre, 559</a>
               </div>
             </div>
 
