@@ -6,7 +6,7 @@ function DropdownButton({ index, activeIndex, setActiveIndex, title, children })
 
   return (
     <motion.div
-      className='flex flex-col w-full p-4 bg-black border border-white rounded-3xl overflow-hidden cursor-pointer'
+      className='flex flex-col w-full p-4 bg-black border border-primary rounded-3xl overflow-hidden cursor-pointer'
       onClick={() => setActiveIndex(isOpen ? null : index)}
     >
       <div className="flex w-full items-center justify-between">

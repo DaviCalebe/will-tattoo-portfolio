@@ -5,6 +5,7 @@ import { useBreakpoint } from '../hooks/useBreakpoint'
 import { motion } from "framer-motion";
 import DropdownButton from '../components/dropdown-button';
 import { useState } from 'react';
+import MapModal from '../components/map-modal';
 
 const About = () => {
   
@@ -47,28 +48,26 @@ const About = () => {
 
           <div className="flex w-full h-[370px] p-2 pt-0">
 
-            <div className="flex flex-row w-full rounded-tl-3xl rounded-3xl bg-black border border-white  overflow-hidden">
+            <div className="flex flex-row w-full rounded-tl-3xl rounded-3xl bg-black border border-primary  overflow-hidden">
               <img 
                 src={studio} 
                 alt="studio" 
                 className="w-full h-full opacity-90 object-cover"
               />
+              <MapModal>
+                <div className="flex justify-center items-center gap-2 w-full h-full bg-black text-primary">
+                  <img src={pin} alt="pin" className='w-12 h-12' />
+                  <span className='text-xl'>
+                    Ver no mapa
+                  </span>
+                </div>
+              </MapModal>
 
-              <div className="flex justify-center items-center gap-2 w-full h-full bg-black text-primary">
-                <img src={pin} alt="pin" className='w-12 h-12' />
-                <span className='text-xl'>
-                  Ver no mapa
-                </span>
-              </div>
+
 
             </div>
 
-{/*             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.9370403190483!2d-34.91574514999999!3d-8.107893550000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1ef869a41849%3A0x37190fa435b75b3a!2sR.%20Jean%20Emile%20Favre%2C%20559%20-%20Ipsep%2C%20Recife%20-%20PE%2C%2051200-060!5e0!3m2!1spt-BR!2sbr!4v1776973324032!5m2!1spt-BR!2sbr"
-              className="w-full h-full border-0"
-              loading="lazy"
-              allowFullScreen
-            /> */}
+
 
           </div>
           

@@ -21,18 +21,7 @@ const Intro = () => {
         <motion.a
           href="#gallery"
           className='group flex items-center justify-end gap-2 w-fit self-end'
-          initial="rest"
-          whileHover="hover"
         >
-          <motion.span
-            variants={{
-              rest: { opacity: 0, x: 20 },
-              hover: { opacity: 1, x: 0 }
-            }}
-            className='text-white md:text-4xl lg:text-6xl'
-          >
-            {'>'}
-          </motion.span>
           <span className='text-[#aaa] group-hover:text-white [-webkit-text-stroke:2px_#fff] transition-colors'>
             GALERIA
           </span>
@@ -41,18 +30,7 @@ const Intro = () => {
         <motion.a
           href="#testimonials"
           className='group flex items-center justify-end gap-2 w-fit self-end'
-          initial="rest"
-          whileHover="hover"
         >
-          <motion.span
-            variants={{
-              rest: { opacity: 0, x: 20 },
-              hover: { opacity: 1, x: 0 }
-            }}
-            className='text-white md:text-4xl lg:text-6xl'
-          >
-            {'>'}
-          </motion.span>
           <span className='text-[#aaa] group-hover:text-white [-webkit-text-stroke:2px_#fff] transition-colors'>
             DEPOIMENTOS
           </span>
@@ -61,18 +39,7 @@ const Intro = () => {
         <motion.a
           href="#about"
           className='group flex items-center justify-end gap-2 w-fit self-end'
-          initial="rest"
-          whileHover="hover"
         >
-          <motion.span
-            variants={{
-              rest: { opacity: 0, x: 20 },
-              hover: { opacity: 1, x: 0 }
-            }}
-            className='text-white md:text-4xl lg:text-6xl'
-          >
-            {'>'}
-          </motion.span>
           <span className='text-[#aaa] group-hover:text-white [-webkit-text-stroke:2px_#fff] transition-colors'>
             SOBRE
           </span>
