@@ -61,6 +61,7 @@ const Gallery = () => {
         <Masonry
           breakpointCols={{
             default: 5,
+            1068: 4,
             768:3,
             420: 2
           }}

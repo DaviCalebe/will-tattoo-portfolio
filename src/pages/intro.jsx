@@ -15,7 +15,7 @@ const Intro = () => {
               <div className="flex md:hidden w-full h-full justify-center items-center">
         <h1 className="font-audiowide text-primary text-center text-9xl">WILL</h1>
       </div>
-        <span className='hidden md:block absolute top-25 right-0 font-audiowide text-md text-white p-8'>ROLE A TELA ↑↓ OU USE AS TECLAS ←→</span>
+        <span className='hidden md:block absolute top-25 right-0 font-audiowide md:text-sm lg:text-md text-white p-8'>ROLE A TELA ↑↓ OU USE AS TECLAS ←→</span>
         
       <div className='absolute bottom-0 right-0 hidden md:flex flex-col gap-4 font-audiowide uppercase md:text-5xl lg:text-7xl text-right text-white p-8'>
         <motion.a

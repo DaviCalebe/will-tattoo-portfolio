@@ -19,8 +19,8 @@ const About = () => {
 
       <div className="flex flex-col justify-evenly w-full h-9/12">
       
-        <div className="grid grid-cols-2 items-center justify-center gap-6">
-          <div className="flex flex-col gap-2 h-full max-h-full pl-8">
+        <div className="grid grid-cols-2 items-stretch gap-6">
+          <div className="flex flex-col gap-2 h-full pl-8">
             <DropdownButton index={1} activeIndex={activeIndex} setActiveIndex={setActiveIndex} title="POR QUE REALISMO?">
               <div className="text-justify">
                 <span className='text-sm text-white'>
@@ -46,14 +46,14 @@ const About = () => {
             </DropdownButton>
           </div>
 
-          <div className="flex w-full h-[370px] p-2 pt-0">
-
-            <div className="flex flex-row w-full rounded-tl-3xl rounded-3xl bg-black border border-primary  overflow-hidden">
+          <div className="p-2 pt-0">
+            <div className="grid grid-cols-2 w-full h-full rounded-tl-3xl rounded-3xl bg-black border border-primary overflow-hidden">
               <img 
                 src={studio} 
                 alt="studio" 
-                className="w-full h-full opacity-90 object-cover"
+                className="w-full h-full object-cover opacity-90"
               />
+
               <MapModal>
                 <div className="flex justify-center items-center gap-2 w-full h-full bg-black text-primary">
                   <img src={pin} alt="pin" className='w-12 h-12' />
@@ -62,13 +62,7 @@ const About = () => {
                   </span>
                 </div>
               </MapModal>
-
-
-
             </div>
-
-
-
           </div>
           
         </div>
@@ -86,12 +80,8 @@ const About = () => {
         </div>
       </div>
 
-
-
     </section>
   )
 }
 
 export default About
-
-

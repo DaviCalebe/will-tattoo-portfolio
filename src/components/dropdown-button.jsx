@@ -27,7 +27,7 @@ function DropdownButton({ index, activeIndex, setActiveIndex, title, children })
         animate={{
           maxHeight: isOpen ? 200 : 0
         }}
-        transition={{ duration: isOpen ? 0.6 : 0.3 }}
+        transition={{ duration: isOpen ? 0.9 : 0.3 }}
         className="overflow-hidden"
       >
         <div className="text-justify mt-3 text-sm text-white">
