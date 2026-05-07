@@ -17,10 +17,10 @@ const About = () => {
 
       {isMobile && <h1 id='about' className="font-audiowide tracking-wide text-5xl w-full text-start p-4 text-black bg-primary">SOBRE</h1>}
 
-      <div className="flex flex-col justify-evenly w-full h-9/12">
+      <div className="flex flex-col justify-center gap-10 xl:gap-0 xl:justify-evenly w-full h-10/12 xl:h-9/12 lg:-mt-10">
       
-        <div className="grid grid-cols-2 items-stretch gap-6">
-          <div className="flex flex-col gap-2 h-full pl-8">
+        <div className="grid md:grid-cols-2 items-stretch h-10/12 md:h-8/12 xl:h-full px-8 gap-6">
+          <div className="flex flex-col gap-2 h-full">
             <DropdownButton index={1} activeIndex={activeIndex} setActiveIndex={setActiveIndex} title="POR QUE REALISMO?">
               <div className="text-justify">
                 <span className='text-sm text-white'>
