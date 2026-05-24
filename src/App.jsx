@@ -1,4 +1,4 @@
-import background from './assets/background-2.jpg'
+import background from './assets/background.jpg'
 import Intro from './pages/intro'
 import Gallery from './pages/gallery'
 import Testimonials from './pages/testimonials'
@@ -29,7 +29,7 @@ function App() {
       </div>
 
       <div
-        className="fixed inset-0 bg-cover bg-center -z-20"
+        className="fixed inset-0 bg-cover bg-center z-[-1]"
         style={{ backgroundImage: `url(${background})`}}
       />
 
