@@ -11,14 +11,16 @@ const Topbar = ({ active }) => {
     0: { height: lg ? 56 : 44, paddingX: lg? 16 : 12 },
     1: { height: 44, paddingX: 12 },
     2: { height: 44, paddingX: 12 },
-    3: { height: lg ? 56 : 44, paddingX: lg ? 16 : 12 },
+    3: { height: 44, paddingX: 12 },
+    4: { height: lg ? 56 : 44, paddingX: lg ? 16 : 12 },
   }
 
   const iconSizes = {
     0: { whatsapp: lg ? 56 : 44, instagram: lg ? 56 : 44 },
     1: { whatsapp: 44, instagram: 44 },
     2: { whatsapp: 44, instagram: 44 },
-    3: { whatsapp: lg ? 56 : 44, instagram: lg ? 56 : 44 },
+    3: { whatsapp: 44, instagram: 44 },
+    4: { whatsapp: lg ? 56 : 44, instagram: lg ? 56 : 44 },
   }
 
   const cal = calendarSizes[active] ?? calendarSizes[0]

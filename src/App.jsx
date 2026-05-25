@@ -1,6 +1,7 @@
 import background from './assets/background.jpg'
 import Intro from './pages/intro'
 import Gallery from './pages/gallery'
+import Experiences from './pages/experiences'
 import Testimonials from './pages/testimonials'
 import About from './pages/about'
 import Topbar from './components/topbar'
@@ -13,9 +14,11 @@ function App() {
   const sections = [
   { title: "Intro" },
   { title: "Galeria" },
+  { title: "Experiências" },
   { title: "Depoimentos" },
   { title: "Sobre" }
   ]
+  
   const stageRef = useRef(null)
   const active = useActiveSection(stageRef)
   useHorizontalScroll(stageRef)
@@ -46,6 +49,7 @@ function App() {
       >
         <Intro />
         <Gallery />
+        <Experiences />
         <Testimonials />
         <About />
       </main>
