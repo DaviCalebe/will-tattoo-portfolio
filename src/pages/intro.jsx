@@ -6,9 +6,12 @@ const Intro = () => {
     <section className='relative flex items-center justify-center flex-shrink-0 w-full md:w-screen h-[50rem] md:h-screen py-6 md:py-0 snap-center snap-always overflow-hidden'>
 
       <div className="absolute inset-0 md:w-1/2 h-full md:[clip-path:ellipse(90%_100%_at_0%_50%)]">
-        <img src={profilepic} alt="Will" className='hidden md:block w-full h-full object-cover' />
-        <div className="hidden md:block absolute inset-0 bg-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black from-1% to-transparent to-40%" />
+        <img
+          src={profilepic}
+          alt="Will"
+          className='hidden md:block w-full h-full object-cover [mask-image:radial-gradient(ellipse_99%_100%_at_0%_50%,black_88%,transparent_90%)]'
+        /> 
+        <div className="hidden md:block absolute inset-0 bg-black/35 [mask-image:radial-gradient(ellipse_99%_100%_at_0%_50%,black_89%,transparent_90%)]" />
       </div>
 
       <div className="relative w-full h-full max-h-10/12 my-10 flex flex-col items-center gap-6 md:block">
