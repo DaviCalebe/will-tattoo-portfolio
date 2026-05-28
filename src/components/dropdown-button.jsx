@@ -10,7 +10,7 @@ function DropdownButton({ index, activeIndex, setActiveIndex, title, children })
       onClick={() => setActiveIndex(isOpen ? null : index)}
     >
       <div className="flex w-full items-center justify-between">
-        <h3 className="text-white text-2xl lg:text-3xl font-audiowide tracking-widest">
+        <h3 className="text-white text-2xl lg:text-2xl font-audiowide tracking-widest">
           {title}
         </h3>
         <motion.img

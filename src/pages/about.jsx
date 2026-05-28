@@ -19,7 +19,7 @@ const About = () => {
 
       <div className="flex flex-col justify-center gap-10 xl:gap-0 xl:justify-evenly w-full h-10/12 xl:h-9/12 lg:-mt-10">
       
-        <div className="grid md:grid-cols-2 items-stretch h-10/12 md:h-8/12 xl:h-full px-8 gap-6">
+        <div className="grid md:grid-cols-2 items-stretch h-10/12 md:h-8/12 xl:h-9/12 px-8 gap-6">
           <div className="flex flex-col gap-2 h-full">
             <DropdownButton index={1} activeIndex={activeIndex} setActiveIndex={setActiveIndex} title="POR QUE REALISMO?">
               <div className="text-justify">
@@ -67,14 +67,14 @@ const About = () => {
           
         </div>
 
-        <div className="relative overflow-hidden w-full">
+        <div className="relative flex justify-self-center place-self-center overflow-hidden w-3/6 rounded-full">
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute top-0 w-[100%] h-full 
-              bg-gradient-to-r from-transparent via-white/30 to-transparent 
-              blur-sm " />
+              bg-gradient-to-r from-transparent via-white/10 to-transparent 
+              blur-sm shine rounded-full" />
           </div>
 
-          <button className="w-full text-white text-3xl bg-[#1A1A1A] p-6 cursor-pointer">
+          <button className="w-full text-primary font-audiowide font-bold uppercase text-3xl rounded-full bg-black p-6 cursor-pointer inset-shadow-sm inset-shadow-primary">
             Transforme sua pele em arte!
           </button>
         </div>
