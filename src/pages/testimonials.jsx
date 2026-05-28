@@ -14,7 +14,7 @@ const Testimonials = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }}
-          className="flex w-5/6 h-5/6 justify-self-center self-center items-center bg-black rounded-lg gap-2 p-2">
+          className="flex w-8/9 h-8/9 justify-self-center self-center items-center bg-black rounded-lg gap-2 p-2">
           <iframe className='w-full h-full' src="https://www.youtube.com/embed/ob3ktDxAjWI" title='testimonials' allowFullScreen></iframe>
   {/*         <div className="flex flex-col">
             <h1 className='text-2xl text-white'>Ver Transcrição</h1>
