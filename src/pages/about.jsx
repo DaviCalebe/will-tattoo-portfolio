@@ -55,12 +55,15 @@ const About = () => {
               />
 
               <MapModal>
-                <div className="flex justify-center items-center gap-2 w-full h-full bg-black text-primary">
+                <motion.div
+                  className="flex justify-center items-center gap-2 w-full h-full bg-black text-primary"
+                  whileHover={{ backgroundColor: '#111' }}
+                >
                   <img src={pin} alt="pin" className='w-12 h-12' />
                   <span className='text-xl'>
                     Ver no mapa
                   </span>
-                </div>
+                </motion.div>
               </MapModal>
             </div>
           </div>
@@ -74,7 +77,7 @@ const About = () => {
               blur-sm shine rounded-full" />
           </div>
 
-          <button className="w-full text-primary font-audiowide font-bold uppercase text-3xl rounded-full bg-black p-6 cursor-pointer inset-shadow-sm inset-shadow-primary">
+          <button className="w-full text-primary font-audiowide font-bold uppercase text-3xl rounded-full bg-black hover:bg-[#111] p-6 cursor-pointer inset-shadow-sm inset-shadow-primary">
             Transforme sua pele em arte!
           </button>
         </div>
