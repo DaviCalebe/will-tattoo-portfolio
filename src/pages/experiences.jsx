@@ -3,6 +3,8 @@ import tattooMachine from '../assets/tattoo-machine.png'
 import tattoo from '../assets/tattoo.png'
 import gloves from '../assets/gloves.png'
 import ink from '../assets/ink.png'
+import decalque from '../assets/decalque.png'
+import cuidados from '../assets/cuidados.png'
 import certificate from '../assets/certificate.webp'
 
 const Experiences = () => {
@@ -14,32 +16,59 @@ const Experiences = () => {
                 <div className="flex w-1/2">
                     <img src={workshop} className='rounded-lg w-[290px] h-[270px] [box-shadow:0px_13px_29px_7px_#000000]' alt="workshop" />
                 </div>
-                <div className="grid grid-cols-2 grid-rows-2 gap-y-6 text-primary">
-                    <div className="flex justify-center items-center gap-2">
-                        <img src={tattooMachine} className="w-14 h-14" alt="" />
-                        <span>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum magnam dignissimos a molestiae earum. Laborum odio sunt, totam temporibus excepturi accusamus quo eveniet repellat.
-                        </span>
-                    </div>
-                    <div className="flex justify-center items-center gap-2">
-                        <img src={tattoo} className="w-14 h-14" alt="" />
-                        <span>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum magnam dignissimos a molestiae earum. Laborum odio sunt, totam temporibus excepturi accusamus quo eveniet repellat.
-                        </span>
-                    </div>
-                    <div className="flex justify-center items-center gap-2">
-                        <img src={gloves} className="w-14 h-14" alt="" />
-                        <span>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum magnam dignissimos a molestiae earum. Laborum odio sunt, totam temporibus excepturi accusamus quo eveniet repellat.
-                        </span>
-                    </div>
-                    <div className="flex justify-center items-center gap-2">
-                        <img src={ink} className="w-14 h-14" alt="" />
-                        <span>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum magnam dignissimos a molestiae earum. Laborum odio sunt, totam temporibus excepturi accusamus quo eveniet repellat.
-                        </span>
-                    </div>
-                </div>
+<div className="grid grid-cols-2 gap-6 text-primary px-2">
+    <div className="grid grid-cols-[56px_180px_1fr] items-center gap-4">
+        <img src={gloves} className="w-14 h-14" alt="" />
+
+        <h3 className="text-white font-audiowide">
+            BIOSEGURANÇA
+        </h3>
+
+        <span>
+            Voltado para a capacitação de tatuadores em práticas essenciais de higiene,
+            esterilização e prevenção de contaminações.
+        </span>
+    </div>
+
+    <div className="grid grid-cols-[56px_180px_1fr] items-center gap-4">
+        <img src={decalque} className="w-14 h-14" alt="" />
+
+        <h3 className="text-white font-audiowide">
+            DECALQUE
+        </h3>
+
+        <span>
+            Aperfeiçoar a aplicação e o posicionamento dos desenhos no corpo,
+            proporcionando mais harmonia, precisão e valorização da anatomia.
+        </span>
+    </div>
+
+    <div className="grid grid-cols-[56px_180px_1fr] items-center gap-4">
+        <img src={tattooMachine} className="w-14 h-14" alt="" />
+
+        <h3 className="text-white font-audiowide">
+            APLICAÇÃO
+        </h3>
+
+        <span>
+            Focado no aperfeiçoamento das técnicas de execução, proporcionando mais
+            precisão, consistência e qualidade.
+        </span>
+    </div>
+
+    <div className="grid grid-cols-[56px_180px_1fr] items-center gap-4">
+        <img src={cuidados} className="w-14 h-14" alt="" />
+
+        <h3 className="text-white font-audiowide">
+            CUIDADOS PÓS TATTOO
+        </h3>
+
+        <span>
+            Voltado para orientar sobre os procedimentos essenciais de cicatrização e
+            manutenção da tatuagem.
+        </span>
+    </div>
+</div>
 
             </fieldset>
 

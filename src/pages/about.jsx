@@ -21,26 +21,27 @@ const About = () => {
       
         <div className="grid md:grid-cols-2 items-stretch h-10/12 md:h-8/12 xl:h-9/12 px-8 gap-6">
           <div className="flex flex-col gap-2 h-full">
-            <DropdownButton index={1} activeIndex={activeIndex} setActiveIndex={setActiveIndex} title="POR QUE REALISMO?">
+            <DropdownButton index={1} activeIndex={activeIndex} setActiveIndex={setActiveIndex} title="QUEM É MENOR?">
               <div className="text-justify">
                 <span className='text-sm text-white'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque est purus, placerat posuere nulla vestibulum quis. Morbi dictum sollicitudin elit, et volutpat sem tempus a. Proin nec eleifend justo, eget mollis eros. Fusce vehicula leo ac velit facilisis interdum. Fusce porta orci metus, consectetur imperdiet justo ullamcorper dignissim. 
+                  É um especialista em tatuagens de realismo preto e cinza, oferecendo trabalhos exclusivos com alto nível de detalhamento. Cada projeto é planejado de forma personalizada, respeitando a estrutura corporal e garantindo equilíbrio, profundidade e acabamento impecável.
+
                 </span>
               </div>
             </DropdownButton>
 
-            <DropdownButton index={2} activeIndex={activeIndex} setActiveIndex={setActiveIndex} title="PREENCHIMENTO">
+            <DropdownButton index={2} activeIndex={activeIndex} setActiveIndex={setActiveIndex} title="POR QUE REALISMO?">
               <div className="text-justify">
                 <span className='text-sm text-white'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque est purus, placerat posuere nulla vestibulum quis. Morbi dictum sollicitudin elit, et volutpat sem tempus a. Proin nec eleifend justo, eget mollis eros. Fusce vehicula leo ac velit facilisis interdum. Fusce porta orci metus, consectetur imperdiet justo ullamcorper dignissim. 
+                  É a escolha ideal para quem busca uma arte rica em detalhes, profundidade e impacto visual. Capaz de transformar referências, memórias e sentimentos em obras únicas. Especializado em realismo e preto e cinza, Will desenvolve projetos personalizados com alto nível de técnica e acabamento, , esse estilo se destaca pela precisão e pela fidelidade aos traços proporcionando resultados que unem significado, qualidade e exclusividade.
                 </span>
               </div>
             </DropdownButton>
 
-            <DropdownButton index={3} activeIndex={activeIndex} setActiveIndex={setActiveIndex} title="BIOGRAFIA">
+            <DropdownButton index={3} activeIndex={activeIndex} setActiveIndex={setActiveIndex} title="COMO AGENDAR?">
               <div className="text-justify">
                 <span className='text-sm text-white'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque est purus, placerat posuere nulla vestibulum quis. Morbi dictum sollicitudin elit, et volutpat sem tempus a. Proin nec eleifend justo, eget mollis eros. Fusce vehicula leo ac velit facilisis interdum. Fusce porta orci metus, consectetur imperdiet justo ullamcorper dignissim. 
+                  
                 </span>
               </div>
             </DropdownButton>
