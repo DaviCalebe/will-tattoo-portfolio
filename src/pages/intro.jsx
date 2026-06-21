@@ -29,15 +29,23 @@ const Intro = () => {
             GALERIA
           </span>
         </motion.a>
-
         <motion.a
+          href="#experiences"
+          className='group flex items-center justify-end gap-2 w-fit self-end'
+        >
+          <span className='text-[#aaa] group-hover:text-white [-webkit-text-stroke:2px_#fff] transition-colors'>
+            EXPERIÊNCIAS
+          </span>
+        </motion.a>
+
+{/*         <motion.a
           href="#testimonials"
           className='group flex items-center justify-end gap-2 w-fit self-end'
         >
           <span className='text-[#aaa] group-hover:text-white [-webkit-text-stroke:2px_#fff] transition-colors'>
             DEPOIMENTOS
           </span>
-        </motion.a>
+        </motion.a> */}
 
         <motion.a
           href="#about"

@@ -15,8 +15,8 @@ function App() {
   { title: "Intro" },
   { title: "Galeria" },
   { title: "Experiências" },
-  { title: "Depoimentos" },
-  { title: "Sobre" }
+/*   { title: "Depoimentos" },
+ */  { title: "Sobre" }
   ]
   
   const stageRef = useRef(null)
@@ -50,8 +50,8 @@ function App() {
         <Intro />
         <Gallery />
         <Experiences />
-        <Testimonials />
-        <About />
+{/*         <Testimonials />
+ */}        <About />
       </main>
     </div>
   )

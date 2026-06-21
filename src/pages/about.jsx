@@ -1,5 +1,5 @@
 import pin from '../assets/pin.png'
-import studio from '../assets/studio.webp'
+import studio from '../assets/IMG_5390.jpg'
 import arrow from '../assets/arrow-dropdown.png'
 import { useBreakpoint } from '../hooks/useBreakpoint'
 import { motion } from "framer-motion";
@@ -24,8 +24,7 @@ const About = () => {
             <DropdownButton index={1} activeIndex={activeIndex} setActiveIndex={setActiveIndex} title="QUEM É MENOR?">
               <div className="text-justify">
                 <span className='text-sm text-white'>
-                  É um especialista em tatuagens de realismo preto e cinza, oferecendo trabalhos exclusivos com alto nível de detalhamento. Cada projeto é planejado de forma personalizada, respeitando a estrutura corporal e garantindo equilíbrio, profundidade e acabamento impecável.
-
+                  O Menor Will é especialista em tatuagens de realismo preto e cinza, oferecendo trabalhos exclusivos com alto nível de detalhamento. Cada projeto é planejado de forma personalizada, respeitando a estrutura corporal e garantindo equilíbrio, profundidade e acabamento impecável.
                 </span>
               </div>
             </DropdownButton>
@@ -33,7 +32,7 @@ const About = () => {
             <DropdownButton index={2} activeIndex={activeIndex} setActiveIndex={setActiveIndex} title="POR QUE REALISMO?">
               <div className="text-justify">
                 <span className='text-sm text-white'>
-                  É a escolha ideal para quem busca uma arte rica em detalhes, profundidade e impacto visual. Capaz de transformar referências, memórias e sentimentos em obras únicas. Especializado em realismo e preto e cinza, Will desenvolve projetos personalizados com alto nível de técnica e acabamento, , esse estilo se destaca pela precisão e pela fidelidade aos traços proporcionando resultados que unem significado, qualidade e exclusividade.
+                  É a escolha ideal para quem busca uma arte rica em detalhes, profundidade e impacto visual, capaz de transformar referências, memórias e sentimentos em obras únicas. Especializado em realismo preto e cinza, Menor Will desenvolve projetos personalizados com alto nível de técnica e acabamento, destacando a precisão e a fidelidade aos traços.
                 </span>
               </div>
             </DropdownButton>
@@ -41,7 +40,7 @@ const About = () => {
             <DropdownButton index={3} activeIndex={activeIndex} setActiveIndex={setActiveIndex} title="COMO AGENDAR?">
               <div className="text-justify">
                 <span className='text-sm text-white'>
-                  
+                  Os agendamentos são confirmados mediante o pagamento de 50% do valor do procedimento, garantindo a reserva do horário escolhido. O atendimento é realizado por horário marcado, proporcionando pontualidade e uma experiência personalizada. As reservas podem ser feitas via WhatsApp ou pelo link de agendamento.
                 </span>
               </div>
             </DropdownButton>
