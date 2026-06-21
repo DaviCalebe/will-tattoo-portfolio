@@ -1,6 +1,7 @@
 import background from './assets/background.jpg'
 import Intro from './pages/intro'
 import Gallery from './pages/gallery'
+import Workshop from './pages/workshop'
 import Experiences from './pages/experiences'
 import Testimonials from './pages/testimonials'
 import About from './pages/about'
@@ -14,6 +15,7 @@ function App() {
   const sections = [
   { title: "Intro" },
   { title: "Galeria" },
+  { title: "Workshop" },
   { title: "Experiências" },
 /*   { title: "Depoimentos" },
  */  { title: "Sobre" }
@@ -49,6 +51,7 @@ function App() {
       >
         <Intro />
         <Gallery />
+        <Workshop />
         <Experiences />
 {/*         <Testimonials />
  */}        <About />

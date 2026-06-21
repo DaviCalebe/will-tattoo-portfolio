@@ -1,5 +1,5 @@
 import pin from '../assets/pin.png'
-import studio from '../assets/IMG_5390.jpg'
+import studio from '../assets/studio.webp'
 import arrow from '../assets/arrow-dropdown.png'
 import { useBreakpoint } from '../hooks/useBreakpoint'
 import { motion } from "framer-motion";
