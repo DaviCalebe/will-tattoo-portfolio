@@ -16,7 +16,7 @@ const Intro = () => {
 
       <div className="relative w-full h-full max-h-10/12 my-10 flex flex-col items-center gap-6 md:block">
               <div className="flex md:hidden w-full h-full justify-center items-center">
-        <h1 className="font-audiowide text-primary text-center text-9xl">WILL</h1>
+        <h1 className="font-audiowide text-primary text-center text-9xl">MENOR<br />WILL</h1>
       </div>
         <span className='hidden md:block absolute top-25 right-0 font-audiowide md:text-sm lg:text-md text-white p-8'>ROLE A TELA ↑↓ OU USE AS TECLAS ←→</span>
         

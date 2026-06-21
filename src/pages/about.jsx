@@ -70,7 +70,7 @@ const About = () => {
           
         </div>
 
-        <div className="relative flex justify-self-center place-self-center overflow-hidden w-3/6 rounded-full">
+        <div className="relative flex justify-self-center place-self-center overflow-hidden md:w-3/6 rounded-full">
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute top-0 w-[100%] h-full 
               bg-gradient-to-r from-transparent via-white/10 to-transparent 
