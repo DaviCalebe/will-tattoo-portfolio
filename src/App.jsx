@@ -16,8 +16,8 @@ function App() {
   { title: "Intro" },
   { title: "Galeria" },
   { title: "Workshop" },
-  { title: "Experiências" },
-/*   { title: "Depoimentos" },
+/*  { title: "Experiências" },
+   { title: "Depoimentos" },
  */  { title: "Sobre" }
   ]
   
@@ -52,8 +52,8 @@ function App() {
         <Intro />
         <Gallery />
         <Workshop />
-        <Experiences />
-{/*         <Testimonials />
+{/*        <Experiences />
+         <Testimonials />
  */}        <About />
       </main>
     </div>
