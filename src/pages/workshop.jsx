@@ -4,6 +4,8 @@ import gloves from '../assets/gloves.png'
 import stencil from '../assets/stencil.png'
 import aftercare from '../assets/aftercare.png'
 import { useBreakpoint } from '../hooks/useBreakpoint'
+import starFulfilled from '../assets/black-star-fulfilled.png'
+import starOutlined from '../assets/black-star-outlined.png'
 
 const cards = [
   {
@@ -53,12 +55,16 @@ const Workshop = () => {
       className="flex flex-col items-center justify-center flex-shrink-0 gap-10 w-full md:w-screen h-auto md:h-screen snap-center snap-always overflow-hidden"
     >
       {isMobile && (
-        <h1
-          id="workshop"
-          className="font-audiowide tracking-wide text-5xl w-full text-start p-4 text-black bg-primary"
-        >
-          WORKSHOP
-        </h1>
+        <div id='workshop' className="flex justify-between w-full p-4 text-black bg-primary">
+            <h1 className="font-audiowide tracking-wide text-5xl">
+              WORKSHOP
+            </h1>
+            <div className="flex justify-center items-center gap-2">
+              <img src={starFulfilled} className='w-10 h-10' alt="Star" />
+              <img src={starFulfilled} className='w-10 h-10' alt="Star" />
+              <img src={starOutlined} className='w-10 h-10' alt="Star" />
+            </div>
+        </div>
       )}
 
       {isMobile ? (

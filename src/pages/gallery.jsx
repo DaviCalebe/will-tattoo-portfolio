@@ -24,6 +24,8 @@ import tattoo20 from "../assets/tattoos/t-arm-angel-2.webp"
 import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { useBreakpoint } from '../hooks/useBreakpoint'
+import starFulfilled from '../assets/black-star-fulfilled.png'
+import starOutlined from '../assets/black-star-outlined.png'
 
 const tattoos = [
   tattoo11, tattoo14, tattoo18, tattoo7, tattoo15,
@@ -55,7 +57,19 @@ const Gallery = () => {
   return (
     <section id='gallery' className='flex flex-col items-center justify-center flex-shrink-0 w-screen gap-10 h-[140rem] md:h-screen snap-center snap-always overflow-hidden md:pb-10'>
       
-      {isMobile && <h1 id='gallery' className="font-audiowide tracking-wide text-5xl w-full text-start p-4 text-black bg-primary">GALERIA</h1>}
+      {isMobile &&
+      
+        <div id='gallery' className="flex justify-between w-full p-4 text-black bg-primary">
+            <h1 className="font-audiowide tracking-wide text-5xl">
+              GALERIA
+            </h1>
+            <div className="flex justify-center items-center gap-2">
+              <img src={starFulfilled} className='w-10 h-10' alt="Star" />
+              <img src={starOutlined} className='w-10 h-10' alt="Star" />
+              <img src={starOutlined} className='w-10 h-10' alt="Star" />
+            </div>
+        </div>
+      }
       
       <div data-vertical-scroll className="grid w-11/12 h-auto md:h-10/12 md:overflow-hidden overflow-y-auto md:scrollbar md:scrollbar-thumb-primary md:scrollbar-thumb-rounded-full md:scrollbar-track-transparent rounded-lg p-2">
         <Masonry
