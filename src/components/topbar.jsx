@@ -11,16 +11,14 @@ const Topbar = ({ active }) => {
     0: { height: lg ? 56 : 44, paddingX: lg? 16 : 12 },
     1: { height: 44, paddingX: 12 },
     2: { height: 44, paddingX: 12 },
-    3: { height: 44, paddingX: 12 },
-    4: { height: lg ? 56 : 44, paddingX: lg ? 16 : 12 },
+    3: { height: lg ? 56 : 44, paddingX: lg ? 16 : 12 },
   }
 
   const iconSizes = {
     0: { whatsapp: lg ? 56 : 44, instagram: lg ? 56 : 44 },
     1: { whatsapp: 44, instagram: 44 },
     2: { whatsapp: 44, instagram: 44 },
-    3: { whatsapp: 44, instagram: 44 },
-    4: { whatsapp: lg ? 56 : 44, instagram: lg ? 56 : 44 },
+    3: { whatsapp: lg ? 56 : 44, instagram: lg ? 56 : 44 },
   }
 
   const cal = calendarSizes[active] ?? calendarSizes[0]
@@ -80,7 +78,7 @@ const Topbar = ({ active }) => {
           href=""
           target="_blank"
           rel="noopener noreferrer"
-          className="flex justify-center items-center bg-black hover:bg-gray-500 border border-white rounded-full"
+          className="flex justify-center items-center bg-black hover:bg-gray-500 border-2 border-primary rounded-full"
           animate={{ width: sizes.whatsapp, height: sizes.whatsapp }}
           transition={{ type: "spring", stiffness: 500, damping: 30 }}
         >
@@ -91,7 +89,7 @@ const Topbar = ({ active }) => {
           href="https://www.instagram.com/menorwill_tatuador"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex justify-center items-center bg-black hover:bg-gray-500 border border-white rounded-full"
+          className="flex justify-center items-center bg-black hover:bg-gray-500 border-2 border-primary rounded-full"
           animate={{ width: sizes.instagram, height: sizes.instagram }}
           transition={{ type: "spring", stiffness: 500, damping: 30 }}
         >

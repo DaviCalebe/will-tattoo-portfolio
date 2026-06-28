@@ -36,7 +36,7 @@ const cards = [
 
 const FeatureCard = ({ icon, title, text, className = '' }) => (
   <div
-    className={`relative overflow-hidden rounded-lg min-h-[200px] bg-black/50 border border-primary/20 before:absolute before:inset-0 before:bg-black/40 ${className}`}
+    className={`relative overflow-hidden rounded-lg min-h-[200px] bg-black border border-primary/60 before:absolute before:inset-0 before:bg-black/40 ${className}`}
   >
     <div className="relative z-10 h-full grid place-items-center text-center p-3 gap-2">
       <img src={icon} className="w-12 h-12" alt="" />
