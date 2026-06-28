@@ -1,6 +1,8 @@
 import pin from '../assets/pin.png'
 import studio from '../assets/studio.webp'
 import arrow from '../assets/arrow-dropdown.png'
+import wppBGimage from '../assets/whatsapp.png'
+import instagramBGimage from '../assets/instagram.png'
 import { useBreakpoint } from '../hooks/useBreakpoint'
 import { motion } from "framer-motion";
 import DropdownButton from '../components/dropdown-button';
@@ -17,7 +19,7 @@ const About = () => {
   const [activeIndex, setActiveIndex] = useState(1);
 
   return (
-    <section id='about' className='flex flex-col items-center justify-center flex-shrink-0 md:gap-10 w-full md:w-screen h-[90rem] md:h-screen snap-center snap-always overflow-hidden'>
+    <section id='about' className='flex flex-col items-center justify-center flex-shrink-0 md:gap-10 w-full md:w-screen h-[100rem] md:h-screen snap-center snap-always overflow-hidden'>
 
       {isMobile && (
         <div id='about' className="flex justify-between w-full p-4 border-b-4 text-black bg-primary">
@@ -69,9 +71,39 @@ const About = () => {
                   </MapModal>
                 </div>
               </div>
-                <h1 className="text-center font-audiowide font-bold uppercase text-3xl">
-                  Transforme sua pele em arte!
-                </h1>
+              <h1 className="text-center font-audiowide font-bold uppercase text-3xl">
+                Transforme sua pele em arte!
+              </h1>
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative overflow-hidden w-full p-4 rounded-full border-2 border-primary/60 bg-black shadow-[inset_0_-3px_2px_0_#25D366]"
+              >
+                <div
+                  className="absolute inset-0 bg-repeat bg-center bg-[length:30px_30px] opacity-15"
+                  style={{ backgroundImage: `url(${wppBGimage})` }}
+                />
+
+                <span className="relative z-10 block text-center text-3xl font-audiowide text-primary">
+                  FALE COMIGO
+                </span>
+              </a>
+              <a
+                href="https://www.instagram.com/menorwill_tatuador"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative overflow-hidden w-full p-4 rounded-full border-2 border-primary/60 bg-black shadow-[inset_0_-3px_2px_0_#ffc400]"
+              >
+                <div
+                  className="absolute inset-0 bg-repeat bg-center bg-[length:30px_30px] opacity-15"
+                  style={{ backgroundImage: `url(${instagramBGimage})` }}
+                />
+
+                <span className="relative z-10 block text-center text-3xl font-audiowide text-primary">
+                  MAIS PROJETOS
+                </span>
+              </a>
 
             </div>
             <div className="absolute bottom-0 right-0">
