@@ -1,10 +1,16 @@
+import { useState } from "react";
 import { motion } from 'framer-motion'
 import { useBreakpoint } from '../hooks/useBreakpoint'
+import star from '../assets/star-fulfilled.png'
+import close from '../assets/close.png'
+import menu from '../assets/menu.png'
 import calendar from '../assets/calendar.png'
 import whatsapp from '../assets/whatsapp.png'
 import instagram from '../assets/instagram.png'
+import Sidebar from './sidebar'
 
 const Topbar = ({ active }) => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const { md, lg } = useBreakpoint()
 
   const calendarSizes = {
@@ -100,9 +106,36 @@ const Topbar = ({ active }) => {
     ) 
     :
     (
-      <div className="flex justify-center items-center px-4 fixed top-0 z-40 w-full h-18 bg-black border-b-6 border-b-primary">
+      <>
+        <div className="flex justify-center items-center px-4 fixed top-0 z-40 w-full h-18 bg-black border-b-6 border-b-primary">
+          <div className="flex gap-4">
+            <img src={star} alt="star" className="w-9 h-9" />
+            <img src={star} alt="star" className="w-9 h-9" />
+            <img src={star} alt="star" className="w-9 h-9" />
+            <img src={star} alt="star" className="w-9 h-9" />
+            <img src={star} alt="star" className="w-9 h-9" />
+          </div>
 
-      </div>
+          <div className="ml-auto">
+            <button
+              onClick={() => setSidebarOpen(!sidebarOpen)}
+              aria-label="Abrir menu"
+              aria-expanded={sidebarOpen}
+              className="flex flex-col justify-center items-center gap-1.5 w-14 h-10 rounded-md bg-black hover:opacity-90 transition-opacity"
+            >
+              <img src={menu} />
+{/*               <span className="block w-10 h-2 bg-primary rounded-full" />
+              <span className="block w-10 h-2 bg-primary rounded-full" />
+              <span className="block w-10 h-2 bg-primary rounded-full" /> */}
+            </button>
+          </div>
+        </div>
+
+        <Sidebar
+        sidebarOpen={sidebarOpen}
+        setSidebarOpen={setSidebarOpen}
+        />
+      </>
 
     )
   ) 

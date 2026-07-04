@@ -42,9 +42,10 @@ const About = () => {
                 <h3 className="text-black text-4xl text-end font-audiowide tracking-widest">QUEM É MENOR?</h3>
                 <div className="text-justify mt-3"> 
                     <span className='text-lg text-black'>
-                      O Menor Will é especialista em tatuagens de realismo preto e cinza, oferecendo trabalhos exclusivos com alto nível de detalhamento. Cada projeto é planejado de forma personalizada, respeitando a estrutura corporal e garantindo equilíbrio, profundidade e acabamento impecável. 
-                      É a escolha ideal para quem busca uma arte rica em detalhes, profundidade e impacto visual, capaz de transformar referências, memórias e sentimentos em obras únicas. Especializado em realismo preto e cinza, Menor Will desenvolve projetos personalizados com alto nível de técnica e acabamento, destacando a precisão e a fidelidade aos traços.
-                    
+Sou especialista em tatuagens de realismo preto e cinza, criando peças exclusivas que unem técnica, precisão e expressão artística em cada detalhe. Cada projeto é desenvolvido de forma totalmente personalizada, respeitando a anatomia do corpo para alcançar equilíbrio, profundidade e uma composição que valoriza a obra como um todo.
+
+Mais do que reproduzir imagens, transformo histórias, memórias e sentimentos em tatuagens únicas, com alto nível de fidelidade aos traços e um acabamento refinado. Meu compromisso é entregar uma arte atemporal, marcante e executada com excelência, proporcionando um resultado que impressiona não apenas pela riqueza de detalhes, mas também pela sua identidade e presença.
+
                     </span>
                 </div>
 
