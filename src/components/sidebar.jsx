@@ -2,7 +2,14 @@ import React from 'react'
 import close from '../assets/close.png'
 
 const Sidebar = ({sidebarOpen, setSidebarOpen}) => {
-    const items = ['Início', 'Sobre', 'Portfólio', 'Contato', 'Agendar']
+    const sections = [
+    { title: "Intro", href: "#intro" },
+    { title: "Galeria", href: "#gallery" },
+    { title: "Workshop", href: "#workshop" },
+    /*  { title: "Experiências" },
+    { title: "Depoimentos" },
+    */  { title: "Sobre", href: "#about" }
+    ]
 
     return (
     <>
@@ -20,12 +27,12 @@ const Sidebar = ({sidebarOpen, setSidebarOpen}) => {
                 <img src={close} alt="Close" className="w-10" />
             </button>
             <ul>
-                {items.map((item, index) => (
+                {sections.map((item, index) => (
                     <li
                     key={index}
                     className="border-b-4 border-b-primary"
                     >
-                    <a href={`#${item.toLowerCase()}`} className="block py-4 px-6 text-primary font-audiowide uppercase text-3xl hover:bg-gray-700">{item}</a>
+                    <a href={item.href} className="block py-4 px-6 text-primary font-audiowide uppercase text-3xl hover:bg-gray-700">{item.title}</a>
                     </li>
                 ))}
             </ul>

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const Intro = () => {
   return (
-    <section className='relative flex items-center justify-center flex-shrink-0 w-full md:w-screen h-[50rem] md:h-screen py-6 md:py-0 snap-center snap-always overflow-hidden'>
+    <section id="intro" className='relative flex items-center justify-center flex-shrink-0 w-full md:w-screen h-[50rem] md:h-screen py-6 md:py-0 snap-center snap-always overflow-hidden'>
 
       <div className="absolute inset-0 md:w-1/2 h-full md:[clip-path:ellipse(90%_100%_at_0%_50%)]">
         <img
