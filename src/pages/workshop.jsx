@@ -52,10 +52,10 @@ const Workshop = () => {
   return (
     <section
       id="workshop"
-      className="flex flex-col items-center justify-center flex-shrink-0 gap-10 w-full md:w-screen h-auto md:h-screen snap-center snap-always overflow-hidden"
+      className="scroll-mt-20 md:scroll-mt-0 flex flex-col items-center justify-center flex-shrink-0 gap-10 w-full md:w-screen min-h-screen md:h-screen snap-center snap-always overflow-hidden"
     >
       {isMobile && (
-        <div id='workshop' className="flex justify-between w-full p-4 text-black bg-primary">
+        <div className="flex justify-between w-full p-4 text-black bg-primary">
             <h1 className="font-audiowide tracking-wide text-5xl">
               WORKSHOP
             </h1>

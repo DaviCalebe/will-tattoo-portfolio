@@ -5,8 +5,8 @@ const Testimonials = () => {
   const isMobile = !useBreakpoint().md;
 
   return (
-    <section id='testimonials' className='flex flex-col gap-10 items-center justify-center flex-shrink-0 w-screen h-screen snap-center snap-always pb-10'>
-      {isMobile && <h1 id='testimonials' className="font-audiowide tracking-wide text-5xl w-full text-start p-4 text-black bg-primary">DEPOIMENTOS</h1>}
+    <section id='testimonials' className='scroll-mt-10 md:scroll-mt-0 flex flex-col gap-10 items-center justify-center flex-shrink-0 w-screen h-screen snap-center snap-always pb-10'>
+      {isMobile && <h1 className="font-audiowide tracking-wide text-5xl w-full text-start p-4 text-black bg-primary">DEPOIMENTOS</h1>}
       <div className="grid w-11/12 h-10/12">
 
         <motion.div
