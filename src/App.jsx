@@ -7,7 +7,7 @@ import Testimonials from './pages/testimonials'
 import About from './pages/about'
 import Topbar from './components/topbar'
 import Pagination from './components/pagination'
-import { useRef } from "react"
+import { useState, useRef } from "react"
 import { useHorizontalScroll } from './hooks/useHorizontalScroll'
 import { useActiveSection } from './hooks/useActiveSection' 
 
@@ -24,10 +24,15 @@ function App() {
   const stageRef = useRef(null)
   const active = useActiveSection(stageRef)
   useHorizontalScroll(stageRef)
+  const [galleryPage, setGalleryPage] = useState(0);
   
   return (
     <div className='relative min-h-screen overflow-hidden'>
-      <Topbar active={active} />
+      <Topbar
+        active={active}
+        galleryPage={galleryPage}
+        setGalleryPage={setGalleryPage}
+      />
 
       <div className="hidden md:block">
         <Pagination containerRef={stageRef} active={active} sections={sections} />
@@ -50,7 +55,9 @@ function App() {
         "
       >
         <Intro />
-        <Gallery />
+        <Gallery
+          galleryPage={galleryPage}
+        />
         <Workshop />
 {/*        <Experiences />
          <Testimonials />

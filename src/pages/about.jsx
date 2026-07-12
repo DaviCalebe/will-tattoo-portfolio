@@ -19,7 +19,7 @@ const About = () => {
   const [activeIndex, setActiveIndex] = useState(1);
 
   return (
-    <section id='about' className='scroll-mt-20 md:scroll-mt-0 flex flex-col items-center justify-center flex-shrink-0 md:gap-10 w-full md:w-screen min-h-screen md:h-screen snap-center snap-always overflow-hidden'>
+    <section id='about' className='scroll-mt-18 md:scroll-mt-0 flex flex-col items-center justify-center flex-shrink-0 md:gap-10 w-full md:w-screen min-h-screen md:h-screen snap-center snap-always overflow-hidden'>
 
       {isMobile && (
         <div className="flex justify-between w-full p-4 border-b-4 text-black bg-primary">

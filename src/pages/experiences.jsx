@@ -5,7 +5,7 @@ import certificate from '../assets/certificate.webp'
 
 const Experiences = () => {
   return (
-    <section id='experiences' className='scroll-mt-20 md:scroll-mt-0 flex flex-col items-center justify-center flex-shrink-0 gap-10 w-full md:w-screen min-h-screen md:h-screen snap-center snap-always overflow-hidden'>
+    <section id='experiences' className='scroll-mt-18 md:scroll-mt-0 flex flex-col items-center justify-center flex-shrink-0 gap-10 w-full md:w-screen min-h-screen md:h-screen snap-center snap-always overflow-hidden'>
         <div className="w-full h-10/12 xl:h-9/12 lg:-mt-10">
             <div className="flex items-center justify-center gap-10 h-full px-8">
                 {/* Imagem do topo */}

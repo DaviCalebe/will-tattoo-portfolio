@@ -8,8 +8,9 @@ import calendar from '../assets/calendar.png'
 import whatsapp from '../assets/whatsapp.png'
 import instagram from '../assets/instagram.png'
 import Sidebar from './sidebar'
+import GalleryPagination from './gallery-pagination'
 
-const Topbar = ({ active }) => {
+const Topbar = ({ active, galleryPage, setGalleryPage }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const { md, lg } = useBreakpoint()
 
@@ -33,20 +34,30 @@ const Topbar = ({ active }) => {
   return (
     md ? (
 
-    <div className="pointer-events-none flex justify-center items-center xs:justify-between px-4 md:px-8 fixed top-0 z-40 w-full h-auto bg-transparent">
-      <div className="hidden xs:flex gap-4">
-{/*           <img src={star} alt="star" className="w-9 h-9" />
+    <navbar className="pointer-events-none flex justify-center items-center xs:justify-between px-4 md:px-8 fixed top-0 z-40 w-full h-auto bg-transparent">
+      <div className="hidden xs:flex gap-4 max-w-1/3">
           <img src={star} alt="star" className="w-9 h-9" />
           <img src={star} alt="star" className="w-9 h-9" />
           <img src={star} alt="star" className="w-9 h-9" />
-          <img src={star} alt="star" className="w-9 h-9" /> */}
+          <img src={star} alt="star" className="w-9 h-9" />
+          <img src={star} alt="star" className="w-9 h-9" />
       </div>
+
+    <div className="pointer-events-auto max-w-1/3">
+                    {active === 1 && (
+        <GalleryPagination
+            currentPage={galleryPage}
+            totalPages={3}
+            onChange={setGalleryPage}
+        />
+    )}
+    </div>
 
       <motion.div
         initial={{ opacity: 0, y: -16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="pointer-events-auto flex items-center justify-evenly gap-4 bg-transparent pt-1 rounded-b-lg"
+        className="pointer-events-auto max-w-1/3 flex items-center justify-evenly gap-4 bg-transparent pt-1 rounded-b-lg"
       >
         <motion.a
           href=""
@@ -102,11 +113,11 @@ const Topbar = ({ active }) => {
           <img src={instagram} alt="instagram" className="filter brightness-50 invert w-1/2 h-1/2 hover:cursor-pointer" />
         </motion.a>
       </motion.div>
-    </div>
+    </navbar>
     ) 
     :
     (
-      <>
+      <navbar>
         <div className="flex justify-center items-center px-4 fixed top-0 z-40 w-full h-18 bg-black border-b-6 border-b-primary">
           <div className="flex gap-4">
             <img src={star} alt="star" className="w-9 h-9" />
@@ -135,7 +146,7 @@ const Topbar = ({ active }) => {
         sidebarOpen={sidebarOpen}
         setSidebarOpen={setSidebarOpen}
         />
-      </>
+      </navbar>
 
     )
   ) 

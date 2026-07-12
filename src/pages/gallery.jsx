@@ -2,7 +2,6 @@ import Masonry from 'react-masonry-css'
 import GLightbox from 'glightbox'
 import "glightbox/dist/css/glightbox.min.css"
 import tattoo1 from "../assets/tattoos/t-arm-angel.webp"
-import tattoo2 from "../assets/tattoos/t-arm-eagle.webp"
 import tattoo3 from "../assets/tattoos/t-arm-jesus.webp"
 import tattoo4 from "../assets/tattoos/t-arm-lion.webp"
 import tattoo5 from "../assets/tattoos/t-arm-samurai.webp"
@@ -11,7 +10,6 @@ import tattoo7 from "../assets/tattoos/t-back-ounce.webp"
 import tattoo8 from "../assets/tattoos/t-leg-medusa.webp"
 import tattoo9 from "../assets/tattoos/t-leg-scorpion.webp"
 import tattoo10 from "../assets/tattoos/t-arm-tiger.webp"
-import tattoo11 from "../assets/tattoos/t-arm-eagle-2.webp"
 import tattoo12 from "../assets/tattoos/t-back-lion.webp"
 import tattoo13 from "../assets/tattoos/t-chest-angels.webp"
 import tattoo14 from "../assets/tattoos/t-leg-elephant.webp"
@@ -21,20 +19,44 @@ import tattoo17 from "../assets/tattoos/t-arm-viking.webp"
 import tattoo18 from "../assets/tattoos/t-arm-shelby.webp"
 import tattoo19 from "../assets/tattoos/t-arm-dragon.webp"
 import tattoo20 from "../assets/tattoos/t-arm-angel-2.webp"
-import { useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { useBreakpoint } from '../hooks/useBreakpoint'
 import starFulfilled from '../assets/black-star-fulfilled.png'
 import starOutlined from '../assets/black-star-outlined.png'
+import GalleryPagination from '../components/gallery-pagination'
 
-const tattoos = [
-  tattoo11, tattoo14, tattoo18, tattoo7, tattoo15,
-  tattoo20, tattoo6, tattoo13, tattoo1, tattoo17,
-  tattoo8, tattoo10, tattoo3, tattoo5, tattoo19,
-  tattoo12, tattoo2, tattoo9, tattoo4, tattoo16
-]
+const Gallery = ({ galleryPage }) => {
+  const tattooPages = [
+    [
+      tattoo14,
+      tattoo18,
+      tattoo16,
+      tattoo15,
+      tattoo6,
+      tattoo13,
+      tattoo1,
+      tattoo8,
+      tattoo3,
+      tattoo12,
+    ],
+    [
+      tattoo4,
+      tattoo5,
+      tattoo7,
+      tattoo9,
+      tattoo10,
+      tattoo17,
+    ],
+    [
+      tattoo19,
+      tattoo20,
+    ],
+  ];
 
-const Gallery = () => {
+  const [currentPage, setCurrentPage] = useState(0);
+
+  const tattoos = tattooPages[galleryPage] || [];
   const isMobile = !useBreakpoint().md;
   const lightboxRef = useRef(null);
 
@@ -42,7 +64,7 @@ const Gallery = () => {
     lightboxRef.current?.destroy();
 
     lightboxRef.current = GLightbox({
-      elements: tattoos.map((img, i) => ({
+      elements: tattoos.map((img) => ({
         href: img,
         type: "image",
       })),
@@ -52,10 +74,10 @@ const Gallery = () => {
       lightboxRef.current?.destroy();
       lightboxRef.current = null;
     };
-  }, []);
+  }, [tattoos]);
 
   return (
-    <section id='gallery' className='scroll-mt-20 md:scroll-mt-0 flex flex-col items-center md:justify-center flex-shrink-0 w-screen gap-10 min-h-screen md:h-screen snap-center snap-always overflow-hidden md:pb-10'>
+    <section id='gallery' className='scroll-mt-18 md:scroll-mt-0 flex flex-col items-center md:justify-center flex-shrink-0 w-screen gap-10 min-h-screen md:h-screen snap-center snap-always overflow-hidden md:pb-10'>
       
       {isMobile &&
       
@@ -71,7 +93,8 @@ const Gallery = () => {
         </div>
       }
       
-      <div data-vertical-scroll className="grid w-11/12 h-auto md:h-10/12 md:overflow-hidden overflow-y-auto md:scrollbar md:scrollbar-thumb-primary md:scrollbar-thumb-rounded-full md:scrollbar-track-transparent rounded-lg p-2">
+      <div className="grid w-11/12 h-auto md:h-10/12 md:overflow-hidden overflow-y-auto md:scrollbar md:scrollbar-thumb-primary md:scrollbar-thumb-rounded-full md:scrollbar-track-transparent rounded-lg p-2">
+
         <Masonry
           breakpointCols={{
             default: 5,
@@ -93,11 +116,21 @@ const Gallery = () => {
               <img
                 src={img}
                 alt={`Tattoo ${i + 1}`}
-                className='rounded-lg mb-4 w-full'
+                className="rounded-lg mb-4 w-full"
+                onLoad={(e) => {
+                  console.log(`Imagem ${i + 1}:`, {
+                    arquivo: img.split("/").pop(),
+                    largura: e.target.naturalWidth,
+                    altura: e.target.naturalHeight,
+                    proporcao: (e.target.naturalWidth / e.target.naturalHeight).toFixed(2),
+                  });
+                }}
               />
             </motion.a>
           ))}
         </Masonry>
+
+
       </div>
     </section>
   )
