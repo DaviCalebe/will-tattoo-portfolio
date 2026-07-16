@@ -154,7 +154,7 @@ Mais do que reproduzir imagens, transformo histórias, memórias e sentimentos e
                 </DropdownButton>
               </div>
 
-              <div className="p-2 pt-0">
+              <div className="">
                 <div className="grid grid-cols-2 w-full h-full rounded-tl-3xl rounded-3xl bg-black border  border-primary/60 overflow-hidden">
                   <img 
                     src={studio} 
