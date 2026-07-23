@@ -1,4 +1,5 @@
 import profilepic from '../assets/profilepic.JPG'
+import profilepic2 from '../assets/will-profile-background.jpg'
 import { motion } from 'framer-motion'
 
 const Intro = () => {
@@ -7,11 +8,11 @@ const Intro = () => {
 
       <div className="absolute inset-0 md:w-1/2 h-full md:[clip-path:ellipse(90%_100%_at_0%_50%)]">
         <img
-          src={profilepic}
+          src={profilepic2}
           alt="Will"
           className='hidden md:block w-full h-full object-cover [mask-image:radial-gradient(ellipse_99%_100%_at_0%_50%,black_88%,transparent_90%)]'
         /> 
-        <div className="hidden md:block absolute inset-0 bg-black/35 [mask-image:radial-gradient(ellipse_99%_100%_at_0%_50%,black_89%,transparent_90%)]" />
+        <div className="hidden md:block absolute inset-0 bg-black/15 [mask-image:radial-gradient(ellipse_99%_100%_at_0%_50%,black_89%,transparent_90%)]" />
       </div>
 
       <div className="relative w-full h-full max-h-10/12 my-10 flex flex-col items-center gap-6 md:block">

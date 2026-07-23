@@ -28,19 +28,32 @@ const Topbar = ({ active, galleryPage, setGalleryPage }) => {
     3: { whatsapp: lg ? 56 : 44, instagram: lg ? 56 : 44 },
   }
 
+  const starSizes = {
+    0: { width: lg ? 48 : 36, height: lg ? 48 : 36 },
+    1: { width: 36, height: 36 },
+    2: { width: 36, height: 36 },
+    3: { width: lg ? 48 : 36, height: lg ? 48 : 36 },
+  }
+
   const cal = calendarSizes[active] ?? calendarSizes[0]
   const sizes = iconSizes[active] ?? iconSizes[0]
+  const stars = starSizes[active] ?? starSizes[0]
+
 
   return (
     md ? (
 
     <header className="pointer-events-none grid grid-cols-3 justify-center items-center xs:justify-between px-4 md:px-8 fixed top-0 z-40 w-full h-auto pt-1 bg-transparent">
       <div className="hidden xs:flex gap-4">
-          <img src={star} alt="star" className="w-9 h-9" />
-          <img src={star} alt="star" className="w-9 h-9" />
-          <img src={star} alt="star" className="w-9 h-9" />
-          <img src={star} alt="star" className="w-9 h-9" />
-          <img src={star} alt="star" className="w-9 h-9" />
+        {[...Array(5)].map((_, i) => (
+          <motion.img
+            key={i}
+            src={star}
+            alt="star"
+            className="w-12 h-12 drop-shadow-[5px_2px_3px_rgba(0,0,0,0.5)]"
+            animate={{ width: stars.width, height: stars.height }}
+          />
+        ))}
       </div>
 
     <div className="pointer-events-auto flex justify-center items-end gap-4">
