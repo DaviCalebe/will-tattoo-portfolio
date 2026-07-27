@@ -8,17 +8,35 @@ function DropdownButton({ index, activeIndex, setActiveIndex, title, children })
     <motion.div
       className='flex flex-col w-full p-4 bg-black border border-primary/60 rounded-3xl overflow-hidden cursor-pointer'
       onClick={() => setActiveIndex(isOpen ? null : index)}
+
+      initial={{
+        opacity: 0,
+        x: -40,
+      }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+      }}
+      viewport={{
+        amount: 0.3,
+      }}
+      transition={{
+        duration: 3,
+        delay: (index - 1) * 0.4,
+        ease: [0.22, 1, 0.36, 1],
+      }}
     >
       <div className="flex w-full items-center justify-between">
         <h3 className="text-white text-2xl lg:text-2xl font-audiowide tracking-widest">
           {title}
         </h3>
+
         <motion.img
-            src={arrow}
-            alt="arrow"
-            className='w-6 h-6'
-            animate={{ rotate: isOpen ? 180 : 0}}
-            transition={{ duration: 0.6 }}
+          src={arrow}
+          alt="arrow"
+          className='w-6 h-6'
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.6 }}
         />
       </div>
 

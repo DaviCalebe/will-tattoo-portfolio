@@ -24,24 +24,36 @@ const Intro = () => {
       <div className='absolute bottom-0 right-0 hidden md:flex flex-col gap-4 font-audiowide uppercase md:text-5xl lg:text-7xl text-right text-white p-8'>
         <motion.a
           href="#gallery"
-          className='group flex items-center justify-end gap-2 w-fit self-end'
+          className="group flex items-center justify-end gap-2 w-fit self-end"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ amount: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
         >
           <span className='text-[#aaa] group-hover:text-white [-webkit-text-stroke:2px_#fff] transition-colors'>
             GALERIA
           </span>
         </motion.a>
+
         <motion.a
           href="#experiences"
           className='group flex items-center justify-end gap-2 w-fit self-end'
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ amount: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
         >
           <span className='text-[#aaa] group-hover:text-white [-webkit-text-stroke:2px_#fff] transition-colors'>
             EXPERIÊNCIAS
           </span>
         </motion.a>
 
-{/*         <motion.a
+        {/* <motion.a
           href="#testimonials"
           className='group flex items-center justify-end gap-2 w-fit self-end'
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
         >
           <span className='text-[#aaa] group-hover:text-white [-webkit-text-stroke:2px_#fff] transition-colors'>
             DEPOIMENTOS
@@ -51,6 +63,10 @@ const Intro = () => {
         <motion.a
           href="#about"
           className='group flex items-center justify-end gap-2 w-fit self-end'
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ amount: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
         >
           <span className='text-[#aaa] group-hover:text-white [-webkit-text-stroke:2px_#fff] transition-colors'>
             SOBRE

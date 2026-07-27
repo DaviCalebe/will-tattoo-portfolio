@@ -42,9 +42,9 @@ const About = () => {
                 <h3 className="text-black text-4xl text-end font-audiowide tracking-widest">QUEM É MENOR?</h3>
                 <div className="text-justify mt-3"> 
                     <span className='text-lg text-black'>
-Sou especialista em tatuagens de realismo preto e cinza, criando peças exclusivas que unem técnica, precisão e expressão artística em cada detalhe. Cada projeto é desenvolvido de forma totalmente personalizada, respeitando a anatomia do corpo para alcançar equilíbrio, profundidade e uma composição que valoriza a obra como um todo.
+                      Sou especialista em tatuagens de realismo preto e cinza, criando peças exclusivas que unem técnica, precisão e expressão artística em cada detalhe. Cada projeto é desenvolvido de forma totalmente personalizada, respeitando a anatomia do corpo para alcançar equilíbrio, profundidade e uma composição que valoriza a obra como um todo.
 
-Mais do que reproduzir imagens, transformo histórias, memórias e sentimentos em tatuagens únicas, com alto nível de fidelidade aos traços e um acabamento refinado. Meu compromisso é entregar uma arte atemporal, marcante e executada com excelência, proporcionando um resultado que impressiona não apenas pela riqueza de detalhes, mas também pela sua identidade e presença.
+                      Mais do que reproduzir imagens, transformo histórias, memórias e sentimentos em tatuagens únicas, com alto nível de fidelidade aos traços e um acabamento refinado. Meu compromisso é entregar uma arte atemporal, marcante e executada com excelência, proporcionando um resultado que impressiona não apenas pela riqueza de detalhes, mas também pela sua identidade e presença.
 
                     </span>
                 </div>
@@ -155,7 +155,21 @@ Mais do que reproduzir imagens, transformo histórias, memórias e sentimentos e
               </div>
 
               <div className="">
-                <div className="grid grid-cols-2 w-full h-full rounded-tl-3xl rounded-3xl bg-black border  border-primary/60 overflow-hidden">
+                <motion.div
+                  initial={{
+                    opacity: 0,
+                    x: 40,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    x: 0,
+                  }}
+                  transition={{
+                    duration: 3,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className="grid grid-cols-2 w-full h-full rounded-tl-3xl rounded-3xl bg-black border border-primary/60 overflow-hidden"
+                >
                   <img 
                     src={studio} 
                     alt="studio" 
@@ -167,28 +181,44 @@ Mais do que reproduzir imagens, transformo histórias, memórias e sentimentos e
                       className="flex justify-center items-center gap-2 w-full h-full bg-black text-primary"
                       whileHover={{ backgroundColor: '#111' }}
                     >
-                      <img src={pin} alt="pin" className='w-12 h-12' />
-                      <span className='text-xl'>
+                      <img src={pin} alt="pin" className="w-12 h-12" />
+                      <span className="text-xl">
                         Ver no mapa
                       </span>
                     </motion.div>
                   </MapModal>
-                </div>
+                </motion.div>
               </div>
-              
+                            
             </div>
 
-            <div className="relative flex justify-self-center place-self-center overflow-hidden md:w-3/6 rounded-full">
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 40,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 3,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="relative flex justify-self-center place-self-center overflow-hidden md:w-3/6 rounded-full"
+            >
               <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute top-0 w-[100%] h-full 
+                <div
+                  className="absolute top-0 w-[100%] h-full 
                   bg-gradient-to-r from-transparent via-white/10 to-transparent 
-                  blur-sm shine rounded-full" />
+                  blur-sm shine rounded-full"
+                />
               </div>
 
               <button className="w-full text-primary font-audiowide font-bold uppercase text-3xl rounded-full bg-black hover:bg-[#111] p-6 cursor-pointer inset-shadow-sm inset-shadow-primary">
                 Transforme sua pele em arte!
               </button>
-            </div>
+            </motion.div>
           </div>
         )
       }

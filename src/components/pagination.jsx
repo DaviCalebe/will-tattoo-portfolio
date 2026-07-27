@@ -46,7 +46,7 @@ function Pagination({ containerRef, active, sections }) {
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -8 }}
-                transition={{ duration: 0.25 }}
+                transition={{ duration: 0.3 }}
                 className="font-audiowide uppercase filter brightness-50 invert text-primary text-4xl"
               >
                 {sections[active]?.title}

@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'  
 import workshop from '../assets/blackwork-workshop.jpeg'
 import tattooMachine from '../assets/tattoo-machine.png'
 import gloves from '../assets/gloves.png'
@@ -6,6 +7,7 @@ import aftercare from '../assets/aftercare.png'
 import { useBreakpoint } from '../hooks/useBreakpoint'
 import starFulfilled from '../assets/black-star-fulfilled.png'
 import starOutlined from '../assets/black-star-outlined.png'
+import FeatureCard from '../components/featureCards'
 
 const cards = [
   {
@@ -33,18 +35,6 @@ const cards = [
     desktopPosition: 'col-start-3 row-start-2 justify-self-end',
   },
 ]
-
-const FeatureCard = ({ icon, title, text, className = '' }) => (
-  <div
-    className={`relative overflow-hidden rounded-lg min-h-[200px] bg-black border border-primary/60 before:absolute before:inset-0 before:bg-black/40 ${className}`}
-  >
-    <div className="relative z-10 h-full grid place-items-center text-center p-3 gap-2">
-      <img src={icon} className="w-12 h-12" alt="" />
-      <h3 className="text-white font-audiowide text-sm">{title}</h3>
-      <span className="text-sm">{text}</span>
-    </div>
-  </div>
-)
 
 const Workshop = () => {
   const isMobile = !useBreakpoint().md
@@ -105,10 +95,23 @@ const Workshop = () => {
             ))}
 
             <div className="col-start-2 row-start-1 row-span-2 flex flex-col items-center justify-center gap-3">
-              <img
+              <motion.img
                 src={workshop}
-                className="rounded-lg w-[100%] h-[100%] object-cover [box-shadow:0px_13px_29px_7px_#000000]"
                 alt="workshop"
+                className="rounded-lg w-full h-full object-cover [box-shadow:0px_13px_29px_7px_#000000]"
+                initial={{
+                  opacity: 0,
+                  scale: 0.7,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  scale: 1,
+                }}
+                viewport={{ amount: 0.4 }}
+                transition={{
+                  duration: 3,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
               />
             </div>
           </div>

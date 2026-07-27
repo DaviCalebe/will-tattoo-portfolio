@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useBreakpoint } from '../hooks/useBreakpoint'
 import star from '../assets/star-fulfilled.png'
 import close from '../assets/close.png'
@@ -51,20 +51,45 @@ const Topbar = ({ active, galleryPage, setGalleryPage }) => {
             src={star}
             alt="star"
             className="w-12 h-12 drop-shadow-[5px_2px_3px_rgba(0,0,0,0.5)]"
-            animate={{ width: stars.width, height: stars.height }}
+            initial={{
+              rotate: 180,
+              opacity: 0,
+              scale: 0.6,
+            }}
+            animate={{
+              rotate: 0,
+              opacity: 1,
+              scale: 1,
+              width: stars.width,
+              height: stars.height,
+            }}
+            transition={{
+              duration: 0.6,
+              delay: i * 0.08,
+              ease: [0.22, 1, 0.36, 1], // easeOut suave
+            }}
           />
         ))}
       </div>
 
-    <div className="pointer-events-auto flex justify-center items-end gap-4">
-                    {active === 1 && (
+<div className="pointer-events-auto flex justify-center items-end gap-4">
+  <AnimatePresence>
+    {active === 1 && (
+      <motion.div
+        initial={{ opacity: 0, y: -15 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -15 }}
+        transition={{ duration: 0.3 }}
+      >
         <GalleryPagination
-            currentPage={galleryPage}
-            totalPages={3}
-            onChange={setGalleryPage}
+          currentPage={galleryPage}
+          totalPages={3}
+          onChange={setGalleryPage}
         />
+      </motion.div>
     )}
-    </div>
+  </AnimatePresence>
+</div>
 
       <motion.div
         initial={{ opacity: 0, y: -16 }}
