@@ -2,48 +2,64 @@ import { motion, useAnimationControls } from "framer-motion";
 import { useEffect } from "react";
 
 const AnimatedStars = ({ src, size, delay }) => {
-  const controls = useAnimationControls();
+    const controls = useAnimationControls();
+    /* const starShadow = "drop-shadow(0px 15px 25px rgba(0,0,0,0.75))"; */
+    const starShadow = `
+    drop-shadow(0px 3px 4px rgba(0,0,0,1))
+    drop-shadow(0px 12px 20px rgba(0,0,0,0.7))
+    `;
 
+// Entrada inicial da estrela
   useEffect(() => {
-    async function play() {
-      // Animação inicial + tamanho
-      await controls.start({
-        rotate: 0,
-        opacity: 1,
-        scale: 1,
-        width: size.width,
-        height: size.height,
-        transition: {
-          duration: 0.6,
-          delay,
-          ease: [0.22, 1, 0.36, 1],
-        },
-      });
+    controls.start({
+      rotate: 0,
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        delay,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    });
+  }, [controls, delay]);
 
-      // Cintilação contínua
-      controls.start({
-        filter: [
-          "brightness(1)",
-          "brightness(2.2)",
-          "brightness(1)",
+
+  // Alteração do tamanho conforme a section ativa
+  useEffect(() => {
+    controls.start({
+      width: size.width,
+      height: size.height,
+      transition: {
+        type: "spring",
+        stiffness: 500,
+        damping: 30,
+      },
+    });
+  }, [controls, size.width, size.height]);
+
+
+  // Cintilação contínua
+  useEffect(() => {
+    controls.start({
+      filter: [
+        `${starShadow} brightness(1)`,
+        `${starShadow} brightness(2.2)`,
+        `${starShadow} brightness(1)`
         ],
-        transition: {
-          duration: 3 + Math.random() * 1.2,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay,
-        },
-      });
-    }
+      transition: {
+        duration: 3 + Math.random() * 1.2,
+        repeat: Infinity,
+        ease: "easeInOut",
+        delay,
+      },
+    });
+  }, [controls, delay]);
 
-    play();
-  }, [controls, delay, size.width, size.height]);
 
   return (
     <motion.img
       src={src}
       alt="star"
-      className="drop-shadow-[5px_2px_3px_rgba(0,0,0,0.5)]"
       initial={{
         rotate: 180,
         opacity: 0,
