@@ -9,10 +9,12 @@ import whatsapp from '../assets/whatsapp.png'
 import instagram from '../assets/instagram.png'
 import Sidebar from './sidebar'
 import GalleryPagination from './gallery-pagination'
+import AnimatedStars from './animatedStars'
 
 const Topbar = ({ active, galleryPage, setGalleryPage }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const { md, lg } = useBreakpoint()
+  const isMobile = !md
 
   const calendarSizes = {
     0: { height: lg ? 56 : 44, paddingX: lg? 16 : 12 },
@@ -39,57 +41,69 @@ const Topbar = ({ active, galleryPage, setGalleryPage }) => {
   const sizes = iconSizes[active] ?? iconSizes[0]
   const stars = starSizes[active] ?? starSizes[0]
 
+return (
+  isMobile ? (
+      <header>
+        <div className="flex justify-center items-center px-4 fixed top-0 z-40 w-full h-18 bg-black border-b-6 border-b-primary">
+          <div className="flex gap-4">
+            <img src={star} alt="star" className="w-9 h-9" />
+            <img src={star} alt="star" className="w-9 h-9" />
+            <img src={star} alt="star" className="w-9 h-9" />
+            <img src={star} alt="star" className="w-9 h-9" />
+            <img src={star} alt="star" className="w-9 h-9" />
+          </div>
 
-  return (
-    md ? (
+          <div className="ml-auto">
+            <button
+              onClick={() => setSidebarOpen(!sidebarOpen)}
+              aria-label="Abrir menu"
+              aria-expanded={sidebarOpen}
+              className="flex flex-col justify-center items-center gap-1.5 w-14 h-10 rounded-md bg-black hover:opacity-90 transition-opacity"
+            >
+              <img src={menu} />
+{/*               <span className="block w-10 h-2 bg-primary rounded-full" />
+              <span className="block w-10 h-2 bg-primary rounded-full" />
+              <span className="block w-10 h-2 bg-primary rounded-full" /> */}
+            </button>
+          </div>
+        </div>
 
+        <Sidebar
+        sidebarOpen={sidebarOpen}
+        setSidebarOpen={setSidebarOpen}
+        />
+      </header>
+  ) : (
     <header className="pointer-events-none grid grid-cols-3 justify-center items-center xs:justify-between px-4 md:px-8 fixed top-0 z-40 w-full h-auto pt-1 bg-transparent">
       <div className="hidden xs:flex gap-4">
         {[...Array(5)].map((_, i) => (
-          <motion.img
+          <AnimatedStars
             key={i}
             src={star}
-            alt="star"
-            className="w-12 h-12 drop-shadow-[5px_2px_3px_rgba(0,0,0,0.5)]"
-            initial={{
-              rotate: 180,
-              opacity: 0,
-              scale: 0.6,
-            }}
-            animate={{
-              rotate: 0,
-              opacity: 1,
-              scale: 1,
-              width: stars.width,
-              height: stars.height,
-            }}
-            transition={{
-              duration: 0.6,
-              delay: i * 0.08,
-              ease: [0.22, 1, 0.36, 1], // easeOut suave
-            }}
+            size={stars}
+            delay={i * 0.08}
           />
         ))}
       </div>
 
-<div className="pointer-events-auto flex justify-center items-end gap-4">
-  <AnimatePresence>
-    {active === 1 && (
-      <motion.div
-        initial={{ opacity: 0, y: -15 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -15 }}
-        transition={{ duration: 0.3 }}
-      >
-        <GalleryPagination
-          currentPage={galleryPage}
-          totalPages={3}
-          onChange={setGalleryPage}
-        />
-      </motion.div>
-    )}
-  </AnimatePresence>
-</div>
+      <div className="pointer-events-auto flex justify-center items-end gap-4">
+        <AnimatePresence>
+          {active === 1 && (
+            <motion.div
+              initial={{ opacity: 0, y: -15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.3 }}
+            >
+              <GalleryPagination
+                currentPage={galleryPage}
+                totalPages={3}
+                onChange={setGalleryPage}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
 
       <motion.div
         initial={{ opacity: 0, y: -16 }}
@@ -152,42 +166,8 @@ const Topbar = ({ active, galleryPage, setGalleryPage }) => {
         </motion.a>
       </motion.div>
     </header>
-    ) 
-    :
-    (
-      <header>
-        <div className="flex justify-center items-center px-4 fixed top-0 z-40 w-full h-18 bg-black border-b-6 border-b-primary">
-          <div className="flex gap-4">
-            <img src={star} alt="star" className="w-9 h-9" />
-            <img src={star} alt="star" className="w-9 h-9" />
-            <img src={star} alt="star" className="w-9 h-9" />
-            <img src={star} alt="star" className="w-9 h-9" />
-            <img src={star} alt="star" className="w-9 h-9" />
-          </div>
-
-          <div className="ml-auto">
-            <button
-              onClick={() => setSidebarOpen(!sidebarOpen)}
-              aria-label="Abrir menu"
-              aria-expanded={sidebarOpen}
-              className="flex flex-col justify-center items-center gap-1.5 w-14 h-10 rounded-md bg-black hover:opacity-90 transition-opacity"
-            >
-              <img src={menu} />
-{/*               <span className="block w-10 h-2 bg-primary rounded-full" />
-              <span className="block w-10 h-2 bg-primary rounded-full" />
-              <span className="block w-10 h-2 bg-primary rounded-full" /> */}
-            </button>
-          </div>
-        </div>
-
-        <Sidebar
-        sidebarOpen={sidebarOpen}
-        setSidebarOpen={setSidebarOpen}
-        />
-      </header>
-
-    )
-  ) 
+  )
+)
 }
 
 export default Topbar
