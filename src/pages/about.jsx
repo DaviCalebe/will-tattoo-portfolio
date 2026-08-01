@@ -176,17 +176,12 @@ const About = () => {
                     className="w-full h-full object-cover opacity-90"
                   />
 
-                  <MapModal>
-                    <motion.div
-                      className="flex justify-center items-center gap-2 w-full h-full bg-black text-primary"
-                      whileHover={{ backgroundColor: '#111' }}
-                    >
-                      <img src={pin} alt="pin" className="w-12 h-12" />
-                      <span className="text-xl">
-                        Ver no mapa
-                      </span>
-                    </motion.div>
-                  </MapModal>
+                  <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.8284881028794!2d-34.946386499999996!3d-8.1189389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1e76bdd84115%3A0x47bce86e42798adb!2sAv.%20Pernambuco%2C%20410%20-%20COHAB%2C%20Recife%20-%20PE%2C%2051280-000!5e0!3m2!1spt-BR!2sbr!4v1782011686996!5m2!1spt-BR!2sbr"
+                      className="w-full h-full rounded-tr-md rounded-br-md"
+                      loading="lazy"
+                      allowFullScreen
+                  />
                 </motion.div>
               </div>
                             

@@ -74,7 +74,7 @@ return (
         />
       </header>
   ) : (
-    <header className="pointer-events-none grid grid-cols-3 justify-center items-center xs:justify-between px-4 md:px-8 fixed top-0 z-40 w-full h-auto pt-1 bg-transparent">
+    <header className="pointer-events-none grid grid-cols-2 justify-center items-center xs:justify-between px-4 md:px-8 fixed top-0 z-40 w-full h-auto pt-1 bg-transparent">
       <div className="hidden xs:flex gap-4">
         {[...Array(5)].map((_, i) => (
           <AnimatedStars
@@ -84,25 +84,6 @@ return (
             delay={i * 0.08}
           />
         ))}
-      </div>
-
-      <div className="pointer-events-auto flex justify-center items-end gap-4">
-        <AnimatePresence>
-          {active === 1 && (
-            <motion.div
-              initial={{ opacity: 0, y: -15 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -15 }}
-              transition={{ duration: 0.3 }}
-            >
-              <GalleryPagination
-                currentPage={galleryPage}
-                totalPages={3}
-                onChange={setGalleryPage}
-              />
-            </motion.div>
-          )}
-        </AnimatePresence>
       </div>
 
       <motion.div
