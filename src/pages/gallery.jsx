@@ -6,10 +6,19 @@ import { motion } from 'framer-motion'
 import { useBreakpoint } from '../hooks/useBreakpoint'
 import starFulfilled from '../assets/black-star-fulfilled.png'
 import starOutlined from '../assets/black-star-outlined.png'
-import video from "../assets/coringa-arlequina2.mp4"
+import tattoo1 from "../assets/tattoo-videos/joker-harleyquinn.mp4"
+import tattoo2 from "../assets/tattoo-videos/angel.mp4"
+import tattoo3 from "../assets/tattoo-videos/lettering.mp4"
+import tattoo4 from "../assets/tattoo-videos/heavens-door.mp4"
+import tattoo5 from "../assets/tattoo-videos/Jesus-angel.mp4"
+import tattoo6 from "../assets/tattoo-videos/gladiator.mp4"
+import tattoo7 from "../assets/tattoo-videos/rockman.mp4"
+import tattoo8 from "../assets/tattoo-videos/oriental.mp4"
+import tattoo9 from "../assets/tattoo-videos/dragon.mp4"
+import tattoo10 from "../assets/tattoo-videos/woman.mp4"
 
 const Gallery = ({ galleryPage }) => {
-  const videos = Array.from({ length: 10 }, () => video)
+  const videos = [tattoo1, tattoo2, tattoo3, tattoo4, tattoo5, tattoo6, tattoo7, tattoo8, tattoo9, tattoo10]
 
   const [active, setActive] = useState(0)
   const refs = useRef([])
