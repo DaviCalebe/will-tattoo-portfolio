@@ -122,11 +122,30 @@ const Gallery = ({ galleryPage }) => {
               <motion.div
                 key={index}
                 layout
+
+                initial={{
+                  opacity: 0,
+                  x: 120,
+                }}
+
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                }}
+
+                viewport={{
+                  once: false,
+                  amount: 0.2,
+                }}
+
                 transition={{
+                  duration: 1,
+                  delay: position * 0.1,
+                  ease: [0.22, 1, 0.36, 1],
                   layout: {
                     duration: 0.7,
-                    ease: [0.22, 1, 0.36, 1]
-                  }
+                    ease: [0.22, 1, 0.36, 1],
+                  },
                 }}
                 onClick={() => setActive(index)}
                 className={`
