@@ -37,41 +37,40 @@ const cards = [
 ]
 
 const Workshop = () => {
-  const breakpoint = useBreakpoint()
-  const isMobile = !breakpoint.md
+  const isMobile = !useBreakpoint().md;
 
   return (
     <section
       id="workshop"
       className="scroll-mt-18 md:scroll-mt-0 flex flex-col items-center justify-center flex-shrink-0 gap-10 w-full md:w-screen min-h-screen md:h-screen snap-center snap-always overflow-hidden"
     >
-      {isMobile && (
-        <div className="flex justify-between w-full p-4 text-black bg-primary">
-          <h1 className="font-audiowide tracking-wide text-5xl">
-            WORKSHOP
-          </h1>
+    {isMobile && (
+      <div className="flex justify-between items-center w-full p-4 text-black bg-primary">
+        <h1 className="font-audiowide tracking-wide text-3xl">
+          WORKSHOP
+        </h1>
 
-          <div className="flex justify-center items-center gap-2">
-            <img
-              src={starFulfilled}
-              className="w-10 h-10"
-              alt="Star"
-            />
+        <div className="flex items-center gap-2">
+          <img
+            src={starFulfilled}
+            className="w-7 h-7"
+            alt="Star"
+          />
 
-            <img
-              src={starFulfilled}
-              className="w-10 h-10"
-              alt="Star"
-            />
+          <img
+            src={starFulfilled}
+            className="w-7 h-7"
+            alt="Star"
+          />
 
-            <img
-              src={starOutlined}
-              className="w-10 h-10"
-              alt="Star"
-            />
-          </div>
+          <img
+            src={starOutlined}
+            className="w-7 h-7"
+            alt="Star"
+          />
         </div>
-      )}
+      </div>
+    )}
 
       {isMobile ? (
         <>

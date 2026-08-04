@@ -2,8 +2,7 @@ import { motion } from "framer-motion";
 import { useBreakpoint } from "../hooks/useBreakpoint";
 
 const FeatureCard = ({ icon, title, text, className = '' }) => {
-  const breakpoint = useBreakpoint();
-  const isMobile = !breakpoint.md;
+  const isMobile = !useBreakpoint().md;
 
   const isLeft = className.includes("col-start-1");
 

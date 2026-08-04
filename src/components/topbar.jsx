@@ -45,12 +45,10 @@ return (
   isMobile ? (
       <header>
         <div className="flex justify-center items-center px-4 fixed top-0 z-40 w-full h-18 bg-black border-b-6 border-b-primary">
-          <div className="flex gap-4">
-            <img src={star} alt="star" className="w-9 h-9" />
-            <img src={star} alt="star" className="w-9 h-9" />
-            <img src={star} alt="star" className="w-9 h-9" />
-            <img src={star} alt="star" className="w-9 h-9" />
-            <img src={star} alt="star" className="w-9 h-9" />
+          <div className="flex gap-2">
+            <h1 className="font-audiowide tracking-wide text-2xl text-primary">
+              MENOR WILL
+            </h1>
           </div>
 
           <div className="ml-auto">
@@ -58,7 +56,7 @@ return (
               onClick={() => setSidebarOpen(!sidebarOpen)}
               aria-label="Abrir menu"
               aria-expanded={sidebarOpen}
-              className="flex flex-col justify-center items-center gap-1.5 w-14 h-10 rounded-md bg-black hover:opacity-90 transition-opacity"
+              className="flex flex-col justify-center items-center gap-1.5 w-10 h-10 rounded-md bg-black hover:opacity-90 transition-opacity"
             >
               <img src={menu} />
 {/*               <span className="block w-10 h-2 bg-primary rounded-full" />

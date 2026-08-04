@@ -34,8 +34,7 @@ const Gallery = ({ galleryPage }) => {
   const [active, setActive] = useState(0)
   const refs = useRef([])
 
-  const breakpoint = useBreakpoint()
-  const isMobile = !breakpoint.md
+  const isMobile = !useBreakpoint().md;
 
   useEffect(() => {
     if (!refs.current[active]) return
@@ -70,7 +69,6 @@ const Gallery = ({ galleryPage }) => {
         md:justify-center
         flex-shrink-0
         w-screen
-        gap-10
         md:h-screen
         snap-center
         snap-always
@@ -79,33 +77,33 @@ const Gallery = ({ galleryPage }) => {
       "
     >
 
-      {isMobile && (
-        <div className="flex justify-between w-full p-4 text-black bg-primary">
-          <h1 className="font-audiowide tracking-wide text-5xl">
-            GALERIA
-          </h1>
+    {isMobile && (
+      <div className="flex justify-between items-center w-full p-4 text-black bg-primary">
+        <h1 className="font-audiowide tracking-wide text-3xl">
+          GALERIA
+        </h1>
 
-          <div className="flex justify-center items-center gap-2">
-            <img
-              src={starFulfilled}
-              className="w-10 h-10"
-              alt="Star"
-            />
+        <div className="flex items-center gap-2">
+          <img
+            src={starFulfilled}
+            className="w-7 h-7"
+            alt="Star"
+          />
 
-            <img
-              src={starOutlined}
-              className="w-10 h-10"
-              alt="Star"
-            />
+          <img
+            src={starOutlined}
+            className="w-7 h-7"
+            alt="Star"
+          />
 
-            <img
-              src={starOutlined}
-              className="w-10 h-10"
-              alt="Star"
-            />
-          </div>
+          <img
+            src={starOutlined}
+            className="w-7 h-7"
+            alt="Star"
+          />
         </div>
-      )}
+      </div>
+    )}
 
       <div
         className="
@@ -184,9 +182,11 @@ const Gallery = ({ galleryPage }) => {
                   cursor-pointer
                   aspect-[305/600]
                   flex-shrink-0
+                  my-14
+                  md:my-0
                   ${
                     isCenter
-                      ? "w-[clamp(180px,22vw,280px)] z-20 shadow-2xl"
+                      ? "w-[clamp(200px,22vw,280px)] z-20 shadow-2xl"
                       : distance === 1
                       ? "w-[clamp(140px,19vw,240px)] z-10"
                       : "w-[clamp(100px,15vw,200px)] z-0"

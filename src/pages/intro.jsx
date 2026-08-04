@@ -1,82 +1,103 @@
-import profilepic from '../assets/profilepic.JPG'
-import profilepic2 from '../assets/will-profile-background.jpg'
-import { motion } from 'framer-motion'
+  import profilepic from '../assets/profilepic.JPG'
+  import profilepic2 from '../assets/will-profile-background.jpg'
+  import { useBreakpoint } from '../hooks/useBreakpoint'
+  import { motion } from 'framer-motion'
 
-const Intro = () => {
-  return (
-    <section id="intro" className='relative flex items-center justify-center flex-shrink-0 w-full md:w-screen h-[50rem] md:h-screen py-6 md:py-0 snap-center snap-always overflow-hidden'>
+  const Intro = () => {
+    const isMobile = !useBreakpoint().md;
 
-      <div className="absolute inset-0 md:w-1/2 h-full md:[clip-path:ellipse(90%_100%_at_0%_50%)]">
-        <img
-          src={profilepic2}
-          alt="Will"
-          className='hidden md:block w-full h-full object-cover [mask-image:radial-gradient(ellipse_99%_100%_at_0%_50%,black_88%,transparent_90%)]'
-        /> 
-        <div className="hidden md:block absolute inset-0 bg-black/15 [mask-image:radial-gradient(ellipse_99%_100%_at_0%_50%,black_89%,transparent_90%)]" />
-      </div>
+    return (
+      <section id="intro" className='relative flex items-center justify-center flex-shrink-0 w-full md:w-screen h-[50rem] md:h-screen py-6 md:py-0 snap-center snap-always overflow-hidden'>
 
-      <div className="relative w-full h-full max-h-10/12 my-10 flex flex-col items-center gap-6 md:block">
-              <div className="flex md:hidden w-full h-full justify-center items-center">
-        <h1 className="font-audiowide text-primary text-center text-9xl">MENOR<br />WILL</h1>
-      </div>
-        <span className='hidden md:block absolute top-25 right-0 font-audiowide md:text-sm lg:text-md text-white p-8'>ROLE A TELA ↑↓ OU USE AS TECLAS ←→</span>
-        
-      <div className='absolute bottom-0 right-0 hidden md:flex flex-col gap-4 font-audiowide uppercase md:text-5xl lg:text-7xl text-right text-white p-8'>
-        <motion.a
-          href="#gallery"
-          className="group flex items-center justify-end gap-2 w-fit self-end"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ amount: 0.4 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          <span className='text-[#aaa] group-hover:text-white [-webkit-text-stroke:2px_#fff] transition-colors'>
-            GALERIA
-          </span>
-        </motion.a>
+        {isMobile && (
+          <div className="flex md:hidden w-full h-screen justify-center items-center">
+            <h1 className="font-audiowide text-primary text-center text-7xl">
+              MENOR<br />WILL
+            </h1>
+          </div>
+        )}
 
-        <motion.a
-          href="#experiences"
-          className='group flex items-center justify-end gap-2 w-fit self-end'
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ amount: 0.4 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-        >
-          <span className='text-[#aaa] group-hover:text-white [-webkit-text-stroke:2px_#fff] transition-colors'>
-            EXPERIÊNCIAS
-          </span>
-        </motion.a>
+        <div className="absolute inset-0 md:w-1/2 h-full md:[clip-path:ellipse(90%_100%_at_0%_50%)]">
+          <img
+            src={profilepic2}
+            alt="Will"
+            className='hidden md:block w-full h-full object-cover [mask-image:radial-gradient(ellipse_99%_100%_at_0%_50%,black_88%,transparent_90%)]'
+          /> 
+          <div className="hidden md:block absolute inset-0 bg-black/15 [mask-image:radial-gradient(ellipse_99%_100%_at_0%_50%,black_89%,transparent_90%)]" />
+        </div>
 
-        {/* <motion.a
-          href="#testimonials"
-          className='group flex items-center justify-end gap-2 w-fit self-end'
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          <span className='text-[#aaa] group-hover:text-white [-webkit-text-stroke:2px_#fff] transition-colors'>
-            DEPOIMENTOS
-          </span>
-        </motion.a> */}
+        <div className="relative w-full h-full max-h-10/12 my-10 flex flex-col items-center gap-6 md:block">
+          <span className='hidden md:block absolute top-25 right-0 font-audiowide md:text-sm lg:text-md text-white p-8'>ROLE A TELA ↑↓ OU USE AS TECLAS ←→</span>
+          
+          <div className='absolute bottom-0 right-0 hidden md:flex flex-col gap-4 font-audiowide uppercase md:text-5xl lg:text-7xl text-right text-white p-8'>
+            <motion.a
+              href="#gallery"
+              className="group flex items-center justify-end gap-2 w-fit self-end"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ amount: 0.4 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <span className='text-[#aaa] group-hover:text-white [-webkit-text-stroke:2px_#fff] transition-colors'>
+                GALERIA
+              </span>
+            </motion.a>
 
-        <motion.a
-          href="#about"
-          className='group flex items-center justify-end gap-2 w-fit self-end'
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ amount: 0.4 }}
-          transition={{ duration: 0.5, delay: 0.7 }}
-        >
-          <span className='text-[#aaa] group-hover:text-white [-webkit-text-stroke:2px_#fff] transition-colors'>
-            SOBRE
-          </span>
-        </motion.a>
-      </div>
-        
-      </div>
-    </section>
-  )
-}
+    {/*         <motion.a
+              href="#experiences"
+              className='group flex items-center justify-end gap-2 w-fit self-end'
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ amount: 0.4 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+              <span className='text-[#aaa] group-hover:text-white [-webkit-text-stroke:2px_#fff] transition-colors'>
+                EXPERIÊNCIAS
+              </span>
+            </motion.a> */}
 
-export default Intro
+            <motion.a
+              href="#workshop"
+              className='group flex items-center justify-end gap-2 w-fit self-end'
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ amount: 0.4 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+              <span className='text-[#aaa] group-hover:text-white [-webkit-text-stroke:2px_#fff] transition-colors'>
+                WORKSHOP
+              </span>
+            </motion.a>
+
+            {/* <motion.a
+              href="#testimonials"
+              className='group flex items-center justify-end gap-2 w-fit self-end'
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <span className='text-[#aaa] group-hover:text-white [-webkit-text-stroke:2px_#fff] transition-colors'>
+                DEPOIMENTOS
+              </span>
+            </motion.a> */}
+
+            <motion.a
+              href="#about"
+              className='group flex items-center justify-end gap-2 w-fit self-end'
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ amount: 0.4 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+            >
+              <span className='text-[#aaa] group-hover:text-white [-webkit-text-stroke:2px_#fff] transition-colors'>
+                SOBRE
+              </span>
+            </motion.a>
+          </div>
+          
+        </div>
+      </section>
+    )
+  }
+
+  export default Intro

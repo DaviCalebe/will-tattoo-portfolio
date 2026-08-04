@@ -21,18 +21,33 @@ const About = () => {
   return (
     <section id='about' className='scroll-mt-18 md:scroll-mt-0 flex flex-col items-center justify-center flex-shrink-0 md:gap-10 w-full md:w-screen min-h-screen md:h-screen snap-center snap-always overflow-hidden'>
 
-      {isMobile && (
-        <div className="flex justify-between w-full p-4 border-b-4 text-black bg-primary">
-          <h1 className="font-audiowide tracking-wide text-5xl">
-            SOBRE
-          </h1>
-          <div className="flex justify-center items-center gap-2">
-            <img src={starFulfilled} className='w-10 h-10' alt="Star" />
-            <img src={starFulfilled} className='w-10 h-10' alt="Star" />
-            <img src={starFulfilled} className='w-10 h-10' alt="Star" />
-          </div>
+    {isMobile && (
+      <div className="flex justify-between items-center w-full p-4 border-b-4 text-black bg-primary">
+        <h1 className="font-audiowide tracking-wide text-3xl">
+          SOBRE
+        </h1>
+
+        <div className="flex items-center gap-2">
+          <img
+            src={starFulfilled}
+            className="w-7 h-7"
+            alt="Star"
+          />
+
+          <img
+            src={starFulfilled}
+            className="w-7 h-7"
+            alt="Star"
+          />
+
+          <img
+            src={starFulfilled}
+            className="w-7 h-7"
+            alt="Star"
+          />
         </div>
-      )}
+      </div>
+    )}
       {
         isMobile ? (
           <div className='flex flex-col justify-center w-full h-full bg-primary'>
