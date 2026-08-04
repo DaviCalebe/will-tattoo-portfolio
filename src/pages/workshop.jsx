@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'  
+import { motion } from 'framer-motion'
 import workshop from '../assets/blackwork-workshop.jpeg'
 import tattooMachine from '../assets/tattoo-machine.png'
 import gloves from '../assets/gloves.png'
@@ -37,7 +37,8 @@ const cards = [
 ]
 
 const Workshop = () => {
-  const isMobile = !useBreakpoint().md
+  const breakpoint = useBreakpoint()
+  const isMobile = !breakpoint.md
 
   return (
     <section
@@ -46,14 +47,29 @@ const Workshop = () => {
     >
       {isMobile && (
         <div className="flex justify-between w-full p-4 text-black bg-primary">
-            <h1 className="font-audiowide tracking-wide text-5xl">
-              WORKSHOP
-            </h1>
-            <div className="flex justify-center items-center gap-2">
-              <img src={starFulfilled} className='w-10 h-10' alt="Star" />
-              <img src={starFulfilled} className='w-10 h-10' alt="Star" />
-              <img src={starOutlined} className='w-10 h-10' alt="Star" />
-            </div>
+          <h1 className="font-audiowide tracking-wide text-5xl">
+            WORKSHOP
+          </h1>
+
+          <div className="flex justify-center items-center gap-2">
+            <img
+              src={starFulfilled}
+              className="w-10 h-10"
+              alt="Star"
+            />
+
+            <img
+              src={starFulfilled}
+              className="w-10 h-10"
+              alt="Star"
+            />
+
+            <img
+              src={starOutlined}
+              className="w-10 h-10"
+              alt="Star"
+            />
+          </div>
         </div>
       )}
 
@@ -74,7 +90,10 @@ const Workshop = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {cards.map((card) => (
-                <FeatureCard key={card.title} {...card} />
+                <FeatureCard
+                  key={card.title}
+                  {...card}
+                />
               ))}
             </div>
           </div>
@@ -86,6 +105,7 @@ const Workshop = () => {
           </legend>
 
           <div className="grid grid-cols-[1fr_1.8fr_1fr] grid-rows-2 p-8 pt-0 gap-6 h-full text-primary">
+
             {cards.map((card) => (
               <FeatureCard
                 key={card.title}
@@ -95,6 +115,7 @@ const Workshop = () => {
             ))}
 
             <div className="col-start-2 row-start-1 row-span-2 flex flex-col items-center justify-center gap-3">
+
               <motion.img
                 src={workshop}
                 alt="workshop"
@@ -107,12 +128,15 @@ const Workshop = () => {
                   opacity: 1,
                   scale: 1,
                 }}
-                viewport={{ amount: 0.4 }}
+                viewport={{
+                  amount: 0.4,
+                }}
                 transition={{
                   duration: 3,
                   ease: [0.22, 1, 0.36, 1],
                 }}
               />
+
             </div>
           </div>
         </div>

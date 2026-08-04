@@ -18,10 +18,24 @@ import tattoo9 from "../assets/tattoo-videos/dragon.mp4"
 import tattoo10 from "../assets/tattoo-videos/woman.mp4"
 
 const Gallery = ({ galleryPage }) => {
-  const videos = [tattoo1, tattoo2, tattoo3, tattoo4, tattoo5, tattoo6, tattoo7, tattoo8, tattoo9, tattoo10]
+  const videos = [
+    tattoo1,
+    tattoo2,
+    tattoo3,
+    tattoo4,
+    tattoo5,
+    tattoo6,
+    tattoo7,
+    tattoo8,
+    tattoo9,
+    tattoo10
+  ]
 
   const [active, setActive] = useState(0)
   const refs = useRef([])
+
+  const breakpoint = useBreakpoint()
+  const isMobile = !breakpoint.md
 
   useEffect(() => {
     if (!refs.current[active]) return
@@ -47,8 +61,6 @@ const Gallery = ({ galleryPage }) => {
     (active + i - 2 + videos.length) % videos.length
   )
 
-  const isMobile = !useBreakpoint().md
-
   return (
     <section
       id="gallery"
@@ -59,7 +71,6 @@ const Gallery = ({ galleryPage }) => {
         flex-shrink-0
         w-screen
         gap-10
-        min-h-screen
         md:h-screen
         snap-center
         snap-always
@@ -123,31 +134,49 @@ const Gallery = ({ galleryPage }) => {
                 key={index}
                 layout
 
-                initial={{
-                  opacity: 0,
-                  x: 120,
-                }}
+                initial={
+                  isMobile
+                    ? false
+                    : {
+                        opacity: 0,
+                        x: 120,
+                      }
+                }
 
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                }}
+                whileInView={
+                  isMobile
+                    ? undefined
+                    : {
+                        opacity: 1,
+                        x: 0,
+                      }
+                }
 
-                viewport={{
-                  once: false,
-                  amount: 0.2,
-                }}
+                viewport={
+                  isMobile
+                    ? undefined
+                    : {
+                        once: false,
+                        amount: 0.2,
+                      }
+                }
 
-                transition={{
-                  duration: 1,
-                  delay: position * 0.1,
-                  ease: [0.22, 1, 0.36, 1],
-                  layout: {
-                    duration: 0.7,
-                    ease: [0.22, 1, 0.36, 1],
-                  },
-                }}
+                transition={
+                  isMobile
+                    ? undefined
+                    : {
+                        duration: 1,
+                        delay: position * 0.1,
+                        ease: [0.22, 1, 0.36, 1],
+                        layout: {
+                          duration: 0.7,
+                          ease: [0.22, 1, 0.36, 1],
+                        },
+                      }
+                }
+
                 onClick={() => setActive(index)}
+
                 className={`
                   relative
                   overflow-hidden
@@ -199,9 +228,9 @@ const Gallery = ({ galleryPage }) => {
                 {/* Overlay do vídeo em destaque */}
                 {isCenter && (
                   <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.5 }}
+                    initial={isMobile ? false : { opacity: 0 }}
+                    animate={isMobile ? undefined : { opacity: 1 }}
+                    transition={isMobile ? undefined : { duration: 0.5 }}
                     className="absolute inset-0 pointer-events-none"
                   />
                 )}
